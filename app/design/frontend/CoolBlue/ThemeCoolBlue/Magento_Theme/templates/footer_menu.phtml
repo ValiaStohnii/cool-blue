@@ -4,8 +4,8 @@
  * See COPYING.txt for license details.
  */
 ?>
-<div class="footer-container">
-    <div class="footer">
+<div class="menu">
+    <div class="menu__column">
         <div>
             <p>You previously viewed:</p>
             <div>
@@ -131,11 +131,5 @@
                 </li>
             </ul>
         </div>
-        <?= $block->getChildHtml() ?>
-        <p class="bugs"><?= $block->escapeHtml(__('Help Us Keep Magento Healthy')) ?> - <a
-            href="http://www.magentocommerce.com/bug-tracking"
-            target="_blank"><strong><?= $block->escapeHtml(__('Report All Bugs')) ?></strong></a>
-        </p>
-        <address><?= $block->escapeHtml($block->getCopyright()) ?></address>
     </div>
 </div>

@@ -1,0 +1,126 @@
+.logo{
+    width: 83px;
+    margin: 0;
+}
+
+.page-header{
+    background-color: #0090e3;
+    height: 52px;   
+    position: fixed;
+    z-index: 99999;
+    width: 100%; 
+}
+
+.panel{
+    &.wrapper{
+        display: none;
+    }
+}
+
+.header{
+    &.content{
+        padding: 5px 20px;
+        height: 52px; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &.links{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        margin: 0;
+        padding: 0;
+            li{
+                margin-right: 10px;
+                margin-bottom: 0;
+                list-style: none;
+                    a{
+                        color: #fff;
+                    }
+            }
+    }
+
+    li{
+        list-style: none;
+        a{
+            color: #fff;
+        }
+    }
+}
+
+.block{
+    &.block-search{
+        width: 555px;
+        .block{
+            &.block-content{
+                .form{
+                    &.minisearch{
+                        .actions{
+                            .action{
+                                &.search{
+                                    opacity: 1;
+                                    &::before{
+                                        font-size: 20px;
+                                        line-height: 40px;
+                                        color: #0090e3;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+                                
+    }
+}
+
+#search{
+    &.input-text{
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        font-size: 12px;
+    }
+}
+
+.nav-sections{
+    background-color: #f2f7fc;
+    position: fixed;
+    z-index: 99999;
+    top: 52px;
+    width: 100%;
+}
+
+.navigation{
+    background-color: #f2f7fc;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    
+    ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        li{
+            margin: 0;
+            margin-right: 10px;
+            button{
+                height: 52px;
+                box-shadow: none;
+                padding: 0;
+                border: 0px;
+                background-color: #f2f7fc;
+                color: #0090e3;
+                font-weight: 600;
+                font-size: 13px;
+                &:hover{
+                    border-bottom: 3px solid  #0090e3;
+                }
+            }
+        }
+    }
+}
