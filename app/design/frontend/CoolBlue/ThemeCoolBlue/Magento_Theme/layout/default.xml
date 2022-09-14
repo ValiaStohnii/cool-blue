@@ -33,6 +33,5 @@
                 <block class="Magento\Framework\View\Element\Template" name="report.bugs" template="Magento_Theme::html/bugreport.phtml" ifconfig="design/footer/report_bugs"/>
             </container>
         </referenceContainer>
-
     </body>
 </page>
