@@ -22,7 +22,7 @@
 
         <referenceContainer name="footer-container">
             <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">
-                <block class="Magento\Theme\Block\Html\Footer" name="footer_menu" template="Magento_Theme::html/footer_menu.phtml"/>
+                <block name="footer_menu" template="Magento_Theme::html/footer_menu.phtml"/>
                 <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" template="Magento_Store::switch/stores.phtml"/>
                 <block class="Magento\Framework\View\Element\Html\Links" name="footer_links">
                     <arguments>
