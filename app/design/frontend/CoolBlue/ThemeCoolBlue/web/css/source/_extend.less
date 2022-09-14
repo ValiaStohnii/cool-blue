@@ -281,9 +281,9 @@
             margin-bottom: 4px;
 
         }
-        &__img{
-            width: 150px;
-            height: 100%;
+        &__image{
+            display: flex;
+            align-items: flex-end;
         }
         &__text{
             font-size: 13px;
@@ -305,6 +305,9 @@
         }
         &__item{
             flex-basis: calc((100% - 40px) / 2);
+        }
+        &__icon{
+            fill: #fff;
         }
 
     }
@@ -375,6 +378,31 @@
         &__list{
             display: flex;
             justify-content: center;
+            align-items: center;
+        }
+        &__link{
+            color: #111;
+            font-size: 13px;
+            line-height: 19.5px;
+            align-items: center;
+            display: flex;
+            &:hover{
+                text-decoration: none;
+                color: #0090e3;
+            }
+        }
+        &__orange{
+            color: #f60;
+            font-size: 13px;
+            line-height: 19.5px;
+            font-weight: 700;
+            &:hover{
+                text-decoration: none;
+                color: #f60;
+            }
+        }
+        &__icon{
+            margin-right: 5px;
         }
     }
 }
