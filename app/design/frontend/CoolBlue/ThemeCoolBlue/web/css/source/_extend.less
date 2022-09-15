@@ -1,3 +1,13 @@
+/**
+ * @author      Valia <valiastohnii@gmail.com>
+ * @copyright   Copyright (c) 2022 GmbH 
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+
+//
+//  Header
+//  _____________________________________________
+
 .logo{
     width: 83px;
     margin: 0;
@@ -24,6 +34,30 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        .header__categories{
+            &__link{
+                color:#fff;
+                cursor: pointer;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 11.7px;
+                display: flex;
+                flex-direction: column;
+                &--span{
+                    color:#fff;
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+                &:hover{
+                    background-color: #199be5;
+                    text-decoration: none;
+                }
+            }
+            &__icon{
+                fill: #fff;
+            }
+        }
     }
 
     &.links{
@@ -32,14 +66,33 @@
         align-content: center;
         margin: 0;
         padding: 0;
-            li{
-                margin-right: 10px;
-                margin-bottom: 0;
-                list-style: none;
-                    a{
-                        color: #fff;
-                    }
+        li{
+            margin-right: 10px;
+            margin-bottom: 0;
+            list-style: none;
+            a{
+                color: #fff;
             }
+        }
+        .authorization-link{
+            color: #fff;
+            font-size: 15px;
+            font-weight: 700;
+            margin-right: 4px;
+            a{
+                display: flex;
+                align-items: center;
+            }
+            &__icon{
+                fill: #fff;
+                width: 24px;
+                height: 24px;
+                &--check{
+                    fill: #fff;
+                    margin-left: 4px;
+                }
+            }
+        }
     }
 
     li{
@@ -48,6 +101,10 @@
             color: #fff;
         }
     }
+}
+
+.wishlist__link__icon{
+    fill: #fff;
 }
 
 .block{
@@ -85,6 +142,10 @@
         font-size: 12px;
     }
 }
+
+//
+//  Navigation
+//  _____________________________________________
 
 .nav-sections{
     background-color: #f2f7fc;
@@ -124,6 +185,11 @@
         }
     }
 }
+
+//
+//  Footer
+//  _____________________________________________
+
 .page-footer{
     background-color: #fff;
     padding-bottom: 0;
@@ -133,9 +199,13 @@
     margin: 0;
     max-width: 100%;
     padding: 0;
+    .footer_menu__section3 .section3__list{
+        margin-left: -40px;
+        margin-top: -15px;
+    }
     .footer_menu__section3 .section3__item{
         margin-left: 40px;
-        margin-top: 25px;
+        margin-top: 15px;
     }
     .footer_menu__section5 .section5__item{
         margin-right: 32px;
@@ -234,6 +304,10 @@
             font-weight: 700;
             line-height: 17.5px;
             margin: 0;
+            &__icon{
+                fill:#0090e3;
+                padding-bottom: 6px;
+            }
         }
         &__list{
             display: flex;
@@ -248,6 +322,8 @@
             color: #111;
             font-size: 13px;
             line-height: 19.5px;
+            display: flex;
+            align-items: center;
             &:hover{
                 text-decoration: none;
                 color: #0090e3;
@@ -258,10 +334,16 @@
             font-size: 13px;
             line-height: 19.5px;
             font-weight: 700;
+            margin-left: 3px;
+            margin-right: 3px;
             &:hover{
                 text-decoration: none;
                 color: #f60;
             }
+        }
+        &__icon{
+            fill: #00b900;
+            margin-right: 8px;
         }
     }
 }
@@ -298,16 +380,20 @@
         }
         &__link{
             color: #fff;
+            display: flex;
         }
         &__list{
             display: flex;
             flex-wrap: wrap;
+            margin-left: -40px;
+            margin-top: -15px;
         }
         &__item{
             flex-basis: calc((100% - 40px) / 2);
         }
         &__icon{
             fill: #fff;
+            margin-right: 8px;
         }
 
     }
@@ -396,6 +482,7 @@
             font-size: 13px;
             line-height: 19.5px;
             font-weight: 700;
+            margin-right: 3px;
             &:hover{
                 text-decoration: none;
                 color: #f60;

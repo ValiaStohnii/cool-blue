@@ -1,24 +1,23 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
+ * @author      Valia <valiastohnii@gmail.com>
+ * @copyright   Copyright (c) 2022 GmbH 
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
 -->
 <page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
    <body>
         <referenceBlock name="header-wrapper">
-            <block class="Magento\Framework\View\Element\Html\Link" name="categories-link" before="top.search">
-                <arguments>
-                    <argument name="label" xsi:type="string" translate="true">View all categories</argument>
-                    <argument name="path" xsi:type="string" translate="true">customlink</argument>
-                </arguments>
-            </block>
+            <block class="Magento\Framework\View\Element\Template" name="categories-link" before="top.search" template="Magento_Theme::html/header/categories.phtml"/>
         </referenceBlock>
 
         <move element="top.links" destination="header-wrapper" after="top.search"/>
         <move element="compare-link-wrapper" destination="header-wrapper" before="top.search"/>
-        <move element="minicart" destination="header-wrapper" after="top.links"/>
+        <move element="minicart" destination="top.links" after="wish-list-link"/>
+        <move element="wish-list-link" destination="top.links" before="minicart"/>
+
+        <referenceBlock name="my-account-link" remove="true" />
 
         <referenceContainer name="footer-container">
             <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">

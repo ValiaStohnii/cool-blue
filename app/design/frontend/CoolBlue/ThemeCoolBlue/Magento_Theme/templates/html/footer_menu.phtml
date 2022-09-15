@@ -1,8 +1,9 @@
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
+ * @author      Valia <valiastohnii@gmail.com>
+ * @copyright   Copyright (c) 2022 GmbH 
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
 ?>
 <div class="footer_menu">
     <div class="footer_menu_column">
@@ -22,19 +23,37 @@
         <hr>
         <div class="footer_menu__section2">
             <div class="footer_menu_content footer_menu_content--section2">
-                <p class="section2__title">anything for a smile</p>
+                <p class="section2__title">anything for a smile 
+                    <span>
+                        <svg class="section2__title__icon" width="8px" height="8px">
+                            <use href="<?=$block->getViewFileUrl('images/icons.svg#icon-smile')?>"></use>
+                        </svg>
+                    </span>
+                </p>
                 <ul class="section2__list">
                     <li class="section2__item">
-                        <a href="#" class="section2__link">Ordered before <span class="section2__orange">23:59</span>, delivered tomorrow <span class="section2__orange">for free</span></a>
+                        <a href="#" class="section2__link">
+                            <svg class="section2__icon" width="16px" height="16px">
+                                <use href="<?=$block->getViewFileUrl('images/icons.svg#icon-checkmark')?>"></use>
+                            </svg>Ordered before <span class="section2__orange">23:59</span>, delivered tomorrow <span class="section2__orange"> for free</span></a>
                     </li>
                     <li class="section2__item">
-                    <a href="#" class="section2__link">14 stores</a>
+                    <a href="#" class="section2__link">
+                        <svg class="section2__icon" width="16px" height="16px">
+                            <use href="<?=$block->getViewFileUrl('images/icons.svg#icon-checkmark')?>"></use>
+                        </svg>14 stores</a>
                     </li>
                     <li class="section2__item">
-                        <a href="#" class="section2__link">Our app</a>
+                        <a href="#" class="section2__link">
+                        <svg class="section2__icon" width="16px" height="16px">
+                            <use href="<?=$block->getViewFileUrl('images/icons.svg#icon-checkmark')?>"></use>
+                        </svg>Our app</a>
                     </li>
                     <li class="section2__item">
-                        <a href="#" class="section2__link"> <span class="section2__orange">Best</span> webshop 2021</a>
+                        <a href="#" class="section2__link">
+                        <svg class="section2__icon" width="16px" height="16px">
+                            <use href="<?=$block->getViewFileUrl('images/icons.svg#icon-checkmark')?>"></use>
+                        </svg><span class="section2__orange">Best </span>webshop 2021</a>
                     </li>
                 </ul>
             </div>
@@ -49,7 +68,7 @@
                     <p class="section3__text">Find your answer quickly and easily on our customer service page.</p>
                     <ul class="section3__list">
                         <li class="section3__item">
-                            <a href="">
+                            <a href="" class="section3__link">
                             <svg class="section3__icon" width="40px" height="40px">
                                 <use href="<?=$block->getViewFileUrl('images/icons.svg#icon-facebook')?>"></use>
                             </svg>
@@ -65,7 +84,7 @@
                         </li>
                         <li class="section3__item">
                             <a href="" class="section3__link">
-                            <svg class="section3__icon" width="40px" height="40px">
+                            <svg class="section3__icon" width="40px" height="40px" fill="white">
                                 <use href="<?=$block->getViewFileUrl('images/icons.svg#icon-twitter')?>"></use>
                             </svg>
                             Twitter</a>
