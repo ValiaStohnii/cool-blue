@@ -7,6 +7,10 @@
 */
 -->
 <page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+   <head>
+        <!-- <link src="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700" src_type="url"/> -->
+        <link src="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@500;family=Open+Sans:wght@300;400;600;700;display=swap" type="url" rel="stylesheet"/>
+   </head>
    <body>
         <referenceBlock name="header-wrapper">
             <block class="Magento\Framework\View\Element\Template" name="categories-link" before="top.search" template="Magento_Theme::html/header/categories.phtml"/>
@@ -16,6 +20,7 @@
         <move element="compare-link-wrapper" destination="header-wrapper" before="top.search"/>
         <move element="minicart" destination="top.links" after="wish-list-link"/>
         <move element="wish-list-link" destination="top.links" before="minicart"/>
+        <move element="authorization-link" destination="top.links" before="-"/>
 
         <referenceBlock name="my-account-link" remove="true" />
 
