@@ -157,6 +157,7 @@
     z-index: 99;
     top: 52px;
     width: 100%;
+    margin-bottom: 16px;
 }
 
 .navigation{
@@ -190,6 +191,172 @@
         }
     }
 }
+
+//
+//  Main
+//  _____________________________________________
+
+.main_sections{
+    &_title{
+        color: #111;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22.5px;
+        margin-bottom: 12px;
+    }
+}
+
+.main_section1{
+    &__lists{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    }
+    &_top_list{
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    &_top_item{
+        margin-bottom: 0;
+        margin-right: 12px;
+        &::before{
+            content: '✔';
+            // background-image: url("../../../../ThemeCoolBlue/web/images/icons.svg#icon-checkmark");
+            // fill: #00b900;
+            width: 16px;
+            height: 16px;
+            color: #00b900;
+        }
+    }
+    &_top_link{
+        color: #111;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            line-height: 19.5px;
+            cursor: pointer;
+            &:hover{
+                text-decoration: none;
+                color: #0090e3;
+            }
+    }
+    &_orange{
+        color: #f60;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        line-height: 19.5px;
+        font-weight: 700;
+        margin-left: 3px;
+        margin-right: 3px;
+        &:hover{
+            text-decoration: none;
+            color: #f60;
+        }    
+    }
+    &_right_list{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    &_right_item{
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+    &_right_link{
+        color: #0090e3;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        line-height: 19.5px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    &_bottom_list{
+        .section1_bottom{
+            &_list{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-bottom: 0;
+            margin-top: 16px;
+            }
+            &_item{
+                margin-bottom: 0;
+                margin-right: 16px;
+                &--smile{
+                    &::before{
+                        content: '☺';
+                        color:#199be5;
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+                &--facebook{
+                    &::before{
+                        content: "";
+                        color:#199be5;
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+            &_link{
+                color: #111;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13px;
+                line-height: 19.5px;
+                cursor: pointer;
+                &:hover{
+                    text-decoration: none;
+                    color: #0090e3;
+                }
+            }
+            &_orange{
+                color: #f60;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13px;
+                line-height: 19.5px;
+                font-weight: 700;
+                margin-left: 3px;
+                margin-right: 3px;
+                &:hover{
+                    text-decoration: none;
+                    color: #f60;
+                } 
+            }
+        }
+    }
+}
+
+.main_section3{
+    &_item{
+        &_heading{
+            margin-top: 16px;
+            padding-left: 16px;
+            margin-bottom: 4px;
+            color: #0090e3;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            line-height: 19.5px;
+        }
+        &_text{
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-bottom: 16px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            line-height: 19.5px;
+            p{
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+
 
 //
 //  Footer
