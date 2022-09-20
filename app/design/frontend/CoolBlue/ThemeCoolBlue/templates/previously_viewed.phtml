@@ -1,0 +1,15 @@
+
+<?php
+echo $this->getLayout()
+->createBlock('Magento\Cms\Block\Block')
+->setBlockId('Previously_viewed')
+->toHtml();
+?>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "previously":{}
+        }
+    }
+</script>

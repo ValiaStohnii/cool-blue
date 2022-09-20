@@ -24,6 +24,14 @@
 
         <referenceBlock name="my-account-link" remove="true" />
 
+        <referenceContainer name="main"> 
+            <block class="Magento\Cms\Block\Block" name="Previously_viewed"> 
+                <arguments> 
+                    <argument name="Previously_viewed" xsi:type="string">Previously_viewed</argument> 
+                </arguments> 
+            </block> 
+        </referenceContainer>
+
         <referenceContainer name="footer-container">
             <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">
                 <block name="footer_menu" template="Magento_Theme::html/footer_menu.phtml"/>
