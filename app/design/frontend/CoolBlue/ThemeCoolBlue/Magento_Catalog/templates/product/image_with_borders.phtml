@@ -29,7 +29,7 @@ $styles = <<<STYLE
     width: {$width}px;
 }
 .product-image-container-{$block->getProductId()} span.product-image-wrapper {
-    padding-bottom: {$paddingBottom}%;
+    padding-bottom: {54}%;
 }
 STYLE;
 //In case a script was using "style" attributes of these elements
@@ -42,7 +42,7 @@ prodImageContainersWrappers = document.querySelectorAll(
     ".product-image-container-{$block->getProductId()}  span.product-image-wrapper"
 );
 for (var i = 0; i < prodImageContainersWrappers.length; i++) {
-    prodImageContainersWrappers[i].style.paddingBottom = "{$paddingBottom}%";
+    prodImageContainersWrappers[i].style.paddingBottom = "{54}%";
 }
 SCRIPT;
 
