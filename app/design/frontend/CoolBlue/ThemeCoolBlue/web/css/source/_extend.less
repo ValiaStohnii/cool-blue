@@ -499,9 +499,9 @@
 }
 
 .previously_viewed{
-    // &_product{
-    //     // width: auto !important;
-    // }
+    &_product{
+        width: auto !important;
+    }
     &_block{
         background-color: #f2f7fc;
         padding: 16px;
@@ -551,6 +551,44 @@
         font-weight: 19.5px;
         margin-top: 8px;   
     }
+}
+
+.inspiration{
+    &_list{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    }
+    &_item{
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-right: 16px;
+        margin-bottom: 0;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover{
+            border: 1px solid #bbb;
+            box-shadow: 0 0.6rem 0.8rem -0.3rem #eee;
+        }
+    }  
+    &_link{
+        width: 243px;
+        &:hover{
+            text-decoration: none;
+        }
+    } 
+    &_text{
+        margin: 0;
+        padding: 16px;
+        color: #0090e3;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 19.5px;
+        text-align: center;
+    } 
 }
 
 //
