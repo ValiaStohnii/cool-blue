@@ -28,7 +28,8 @@ var config = {
             'validation':             'mage/validation/validation',
             'breadcrumbs':            'Magento_Theme/js/view/breadcrumbs',
             'jquery/ui':              'jquery/compat',
-            'cookieStatus':           'Magento_Theme/js/cookie-status'
+            'cookieStatus':           'Magento_Theme/js/cookie-status',
+            'previously':             'Magento_Theme/js/previously-viewed'
         }
     },
     deps: [

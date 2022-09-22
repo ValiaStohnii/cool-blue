@@ -5,11 +5,11 @@
 */
 
 var config = {
-    map: {
-        "*": {
-            'previously': 'ThemeCoolBlue/js/sections/previously-viewed'
-        }
-    },
+    // map: {
+    //     "*": {
+    //         'previously': 'ThemeCoolBlue/js/sections/previously-viewed'
+    //     }
+    // },
     deps: [
         'js/sections/categories'
     ],
