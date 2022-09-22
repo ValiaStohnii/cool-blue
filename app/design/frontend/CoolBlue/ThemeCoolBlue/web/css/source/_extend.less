@@ -159,6 +159,21 @@
     width: 100%;
     margin-bottom: 16px;
 }
+.navigation .level0  .level-top{
+    padding: 0;
+    color: #0090e3;
+    &:hover{
+        color: #0090e3;
+    }
+}
+
+.navigation .level0.parent .level-top .ui-menu-icon:after {
+    display: none;
+}
+
+.navigation .level0.parent .level-top{
+    padding-right: 0;
+}
 
 .navigation{
     background-color: #f2f7fc;
@@ -166,15 +181,30 @@
     align-content: center;
     justify-content: center;
     align-items: center;
+
+    .level0{
+        position: static;
+        .submenu {
+            left: -275px !important;
+        }
+    }
+
+    .nav-1,.nav-2,.nav-3,.nav-4,.nav-5,.nav-6,.nav-7,.nav-8,.nav-9,.nav-10{
+        ul{
+            width: 1827px;
+            justify-content: space-evenly;
+        }
+    }
     
     ul {
         display: flex;
         justify-content: space-between;
         width: 100%;
+        padding: 0;
         li{
             margin: 0;
             margin-right: 10px;
-            button{
+            a{
                 height: 52px;
                 box-shadow: none;
                 padding: 0;

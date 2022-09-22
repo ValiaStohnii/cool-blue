@@ -17,9 +17,9 @@ $_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit)
 
 <nav class="navigation" data-action="navigation">
     <ul data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
-        <!-- <?= /* @noEscape */ $_menuHtml?>
-        <?= $block->getChildHtml() ?> -->
-        <li>
+        <?= /* @noEscape */ $_menuHtml?>
+        <?= $block->getChildHtml() ?>
+        <!-- <li>
             <button type="button">Computers & tablets</button>
         </li>
         <li>
@@ -48,6 +48,6 @@ $_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit)
         </li>
         <li>
             <button type="button">Promotions</button>
-        </li>
+        </li> -->
     </ul>
 </nav>
