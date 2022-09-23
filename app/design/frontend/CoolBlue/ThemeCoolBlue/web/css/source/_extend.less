@@ -18,7 +18,7 @@
     height: 52px;   
     position: sticky;
     top: 0;
-    z-index: 99999;
+    z-index: 99;
     width: 100%; 
 }
 
@@ -30,13 +30,20 @@
 
 .header{
     &.content{
-        padding: 5px 20px;
+        padding: 5px 0;
         height: 52px; 
         display: flex;
         justify-content: space-between;
         align-items: center;
 
+        &:before,
+        &:after{
+            display: none;
+        }
+
         .header__categories{
+            position: absolute;
+            left: 110px;
             &__link{
                 color:#fff;
                 cursor: pointer;
@@ -145,6 +152,10 @@
         border: none;
         font-size: 12px;
     }
+}
+
+.minicart-wrapper .action.showcart:before{
+    color: #fff;
 }
 
 //
@@ -278,6 +289,9 @@ padding-bottom: 0;
     &_top_item{
         margin-bottom: 0;
         margin-right: 12px;
+        a{
+            color: #111 
+        }
         &::before{
             content: '✔';
             // background-image: url("../../../../ThemeCoolBlue/web/images/icons.svg#icon-checkmark");
@@ -390,9 +404,11 @@ padding-bottom: 0;
 .slick-slide{
     margin-right: 12px;
 }
+
 .slick-prev{
     position: absolute;
     left: -60px;
+    z-index: 89;
     &:before{
         color: #18b5f3;
         font-size: 24px;
@@ -407,6 +423,7 @@ padding-bottom: 0;
 .slick-next{
     position: absolute;
     right: -52px;
+    z-index: 89;
     &:before{
         color: #18b5f3;
         font-size: 24px;
