@@ -197,6 +197,30 @@
         position: static;
         .submenu {
             left: -275px !important;
+
+            li{
+                width: 199px;
+                margin-left: 271px;
+
+                .submenu{
+                    width: auto;
+                    li{
+                        margin: 0;
+                    }
+                }
+            }
+
+            a{
+                background-color: #fff;
+                color: #0090e3;
+                height: auto;
+                &:hover{
+                    background-color: #fff;
+                    color: #0090e3;
+                    text-decoration: underline;
+                    border-bottom: none;
+                }
+            }
         }
     }
 
