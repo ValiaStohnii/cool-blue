@@ -174,4 +174,43 @@
             }
         }
     }
+    &_section3{
+        margin-top: 32px;
+        &_list{
+            padding-left: 0;
+            display: flex;
+            list-style: none;
+
+            .section3{
+                &_item{
+                    width: 203px;
+                    height: 52px;
+                    margin-right: 12px;
+                    margin-bottom: 0;
+                    border: 1px solid @border-color;
+                    border-radius: 4px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &:hover{
+                        border: 1px solid @border-hover-color;
+                        box-shadow: 0 0.6rem 0.8rem -0.3rem @box-shadow-color;
+                    }
+                }
+                &_link{
+                    padding: 16px 20px;
+                    cursor: pointer;
+                    &_img{
+                        height: 24px;
+                        &--samsung{
+                            height: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
