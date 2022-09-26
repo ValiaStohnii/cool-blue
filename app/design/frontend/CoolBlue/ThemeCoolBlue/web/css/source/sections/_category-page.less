@@ -1,0 +1,177 @@
+/**
+ * @author      Valia <valiastohnii@gmail.com>
+ * @copyright   Copyright (c) 2022 GmbH 
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+
+//
+//  Variables
+//  _____________________________________________
+
+@main-color: #0090e3;
+@second-color: #fff;
+@accent-color: #f60;
+@title-color: #111;
+@page-title-color:#285dab;
+@top-item-before-color: #00b900;
+@bottom-item-before-color:#199be5;
+@slick-button-color: #18b5f3;
+@previously-background-color:#f2f7fc;
+@previously-button-color:#090;
+@check-icon-color:#00b900;
+@previously-button-hover-color:#005e00;
+@border-color:#ddd;
+@border-hover-color:#bbb;
+@box-shadow-color:#eee;
+@border-top-color:#c3c2c2;
+
+//
+//  Category Section 1
+//  _____________________________________________
+
+.page-layout-1column.page-with-filter .column.main{
+    padding-top: 0;
+}
+
+.page-title{
+    margin-bottom: 8px;
+    font-family: 'Noto Serif Georgian', serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 35px;
+    color: @page-title-color;
+}
+
+.category{
+    &_section1{
+        display: flex;
+        justify-content: space-between;
+
+        .section1{
+            &_list{
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -12px;
+            margin-top: -12px;
+            margin-bottom: 0;
+            width:  659px;
+            padding-left: 0;
+            }
+            &_item{
+                flex-basis: calc(47%);
+                margin-left: 12px;
+                margin-top: 12px;
+                width: 311px;
+                margin-bottom: 0;
+                border: 1px solid @border-color;
+                border-radius: 4px;
+                &:hover{
+                    border: 1px solid @border-hover-color;
+                    box-shadow: 0 0.6rem 0.8rem -0.3rem @box-shadow-color;
+                }
+            }
+            &_link{
+                &:hover{
+                    text-decoration: none;
+                }
+                &_img{
+                    background-color: @previously-background-color;
+                }
+                p{
+                    margin: 0;
+                }
+                &_title{
+                    padding-top: 16px;
+                    padding-left: 16px;
+                    padding-right: 16px;
+                    margin-bottom: 4px;
+                    color: @main-color;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 13px;
+                    line-height: 19.5px;
+                    font-weight: 700;
+                }
+                &_text{
+                    color: @title-color;
+                    padding-left: 16px;
+                    padding-right: 16px;
+                    padding-bottom: 16px;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 13px;
+                    line-height: 19.5px;
+                }
+            }
+            &_img{
+                &_link_picture{
+                    width: 634px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    &_section2{
+        margin-top: 32px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            border-top: 1px solid @border-top-color;
+            top: 50%;
+            width: 316px;
+            left: 0;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            border-top: 1px solid @border-top-color;
+            top: 50%;
+            width: 275px;
+            left: 1003px;
+        }
+        &_list{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            position: relative;
+        }
+        .section2{
+            &_item{
+                padding-right: 16px;
+                margin-bottom: 0;
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+            &_link{
+                color: @title-color;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13px;
+                line-height: 19.5px;
+                display: flex;
+                align-items: center;
+                &:hover{
+                    text-decoration: none;
+                    color: @main-color;
+                }
+            }
+            &_orange{
+                color: @accent-color;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13px;
+                line-height: 19.5px;
+                font-weight: 700;
+                margin-left: 3px;
+                margin-right: 3px;
+                &:hover{
+                    text-decoration: none;
+                    color: @accent-color;
+                }
+            }
+            &_icon{
+                fill: @check-icon-color;
+                margin-right: 8px;
+            }
+        }
+    }
+}
