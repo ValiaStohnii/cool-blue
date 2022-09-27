@@ -198,17 +198,24 @@
                     </li>
             </ul>
         </div>
-        <div>
-            <h2>Inspiration</h2>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+        <div class="category_section7">
+            <h2 class="category_section7_title">Inspiration</h2>
+            <ul class="category_section7_list">
+                <li class="section7_item"><a class="section7_link" href="">Study with HP</a></li>
+                <li class="section7_item"><a class="section7_link" href="">Home</a></li>
+                <li class="section7_item"><a class="section7_link" href="">Gaming</a></li>
+                <li class="section7_item"><a class="section7_link" href="">On its way</a></li>
+                <li class="section7_item"><a class="section7_link" href="">Graphic tasks</a></li>
+                <li class="section7_item"><a class="section7_link" href="">Office</a></li>
             </ul>
-            <img src="" alt="">
+            <div>
+                <?php
+                echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('inspiration')
+                ->toHtml();
+                ?>
+            </div>
         </div>
         <div>
             <h2>Advice</h2>
