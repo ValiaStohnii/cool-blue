@@ -24,6 +24,8 @@
 @border-hover-color:#bbb;
 @box-shadow-color:#eee;
 @border-top-color:#c3c2c2;
+@hover-button-color:#1e4680;
+@box-shadow-button-color:#003366;
 
 //
 //  Category Section 1
@@ -274,5 +276,116 @@
                 }
             }
         }
+    }
+    &_section5{
+        margin-top: 32px;
+        &_title{
+            color:@title-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22.5px;
+            margin-bottom: 12px;
+            margin-top: 0;
+        }
+        &_blocks{
+            display: flex;
+            height: 286px;
+        }
+        &_img{
+            width: 634px;
+            border-radius: 4px;
+            margin-right: 12px;
+        }
+        &_item{
+            width: 311px;
+            border: 1px solid @border-color;
+            border-radius: 4px;
+            margin-right: 12px;
+            &:hover{
+                border: 1px solid @border-hover-color;
+                box-shadow: 0 0.6rem 0.8rem -0.3rem @box-shadow-color;
+            }   
+            .section5{
+                &_link{
+                    &:hover{
+                        text-decoration: none;
+                    }
+                    &_img{
+                        background-color: @previously-background-color;
+                    }
+                    p{
+                        margin: 0;
+                    }
+                    &_title{
+                        padding-top: 16px;
+                        padding-left: 16px;
+                        padding-right: 16px;
+                        margin-bottom: 4px;
+                        color: @main-color;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 13px;
+                        line-height: 19.5px;
+                        font-weight: 700;
+                    }
+                    &_text{
+                        color: @title-color;
+                        padding-left: 16px;
+                        padding-right: 16px;
+                        padding-bottom: 16px;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 13px;
+                        line-height: 19.5px;
+                    }
+                }
+            }        
+        }
+        &_block{
+            width: 311px;
+            border: 1px solid @border-color;
+            border-radius: 4px;
+            padding: 16px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .section5_block{
+                &_description{
+                    width: 151px;
+                }
+                &_title{
+                    font-family: 'Noto Serif Georgian', serif;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 30px;
+                    color: @main-color;
+                    margin-bottom: 8px;
+                }
+                &_text{
+                    color: @title-color;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 13px;
+                    line-height: 19.5px;
+                }
+                &_img{
+                    position: absolute;
+                    height: 130px;
+                    right: 16px;
+                    bottom: 66px;
+                }
+                &_button{
+                    color: @second-color;
+                    background-color: @page-title-color;
+                    border-radius: 4px;
+                    padding: 16px;
+                    box-shadow: inset 0 -2px 0 0 @hover-button-color;
+                    &:hover{
+                        background-color: @hover-button-color;
+                        box-shadow: inset 0 -2px 0 0 @box-shadow-button-color;
+                    }
+                }
+            }
+        }
+
     }
 }
