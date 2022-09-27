@@ -472,6 +472,9 @@
         }
         .inspiration_img_list{
             margin-top: 60px;
+            .slick-slide{
+                margin: 0;
+            }
             .slick-prev{
                 height: 45px;
                 width: 45px;
@@ -490,6 +493,14 @@
                 position: absolute;
                 top: -55px;
                 display: flex;
+                .slick-active{
+                    button{
+                        &::before{
+                            border: 2px solid @main-color !important;
+                            background-color: @previously-background-color;
+                        }
+                    }
+                }
                 li{
                     margin-right: 0;
                     margin-left: 0;
@@ -641,6 +652,59 @@
                     }
 
                 }
+            }
+        }
+    }
+    &_section8{
+        margin-top: 32px;
+        &_title{
+            color:@title-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22.5px;
+            margin-top: 0;
+        }
+        &_list{
+            padding-left: 0;
+            display: flex;
+            list-style: none;
+            .section8{
+                &_img{
+                    border-radius: 4px;
+                    height: 228px;
+                }
+                &_item{
+                    margin-right: 32px;
+                    width: 405px;
+                    &:last-child{
+                       margin-right: 0;
+                    }
+                }
+                &_title{
+                    margin-top: 8px;
+                    margin-bottom: 16px;
+                    color: @title-color;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 15px;
+                    font-weight: 700;
+                    line-height: 18.75px;
+                }
+                &_text{
+                    color: @title-color;
+                    padding-bottom: 16px;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 13px;
+                    line-height: 19.5px;
+                }
+                &_link{
+                    color: @main-color;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 13px;
+                    font-weight: 19.5px;
+                    margin-top: 8px;   
+                }
+
             }
         }
     }
