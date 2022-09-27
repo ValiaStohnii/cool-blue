@@ -213,4 +213,66 @@
             }
         }
     }
+    &_section4{
+        margin-top: 32px;
+        &_title{
+            color:@title-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22.5px;
+            margin-bottom: 12px;
+            margin-top: 0;
+        }
+        &_list{
+            padding-left: 0;
+            display: flex;
+            list-style: none;
+            .section4{
+                &_item{
+                    border: 1px solid @border-color;
+                    border-radius: 4px;
+                    margin-right: 12px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &:hover{
+                        border: 1px solid @border-hover-color;
+                        box-shadow: 0 0.6rem 0.8rem -0.3rem @box-shadow-color;
+                    }
+                }
+                &_link{
+                    &:hover{
+                        text-decoration: none;
+                    }
+                    &_img{
+                        background-color: @previously-background-color;
+                    }
+                    p{
+                        margin: 0;
+                    }
+                    &_title{
+                        padding-top: 16px;
+                        padding-left: 16px;
+                        padding-right: 16px;
+                        margin-bottom: 4px;
+                        color: @main-color;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 13px;
+                        line-height: 19.5px;
+                        font-weight: 700;
+                    }
+                    &_text{
+                        color: @title-color;
+                        padding-left: 16px;
+                        padding-right: 16px;
+                        padding-bottom: 16px;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 13px;
+                        line-height: 19.5px;
+                    }
+                }
+            }
+        }
+    }
 }
