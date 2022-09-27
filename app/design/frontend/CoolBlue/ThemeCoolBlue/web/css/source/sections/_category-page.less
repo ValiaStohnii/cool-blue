@@ -687,7 +687,7 @@
                     color: @title-color;
                     font-family: 'Open Sans', sans-serif;
                     font-size: 15px;
-                    font-weight: 700;
+                    font-weight: 600;
                     line-height: 18.75px;
                 }
                 &_text{
@@ -757,6 +757,60 @@
                     margin: 0;
                 }
             }
+        }
+    }
+    &_section10{
+        margin-top: 32px;
+        .section10{
+            &_button{
+                color: @second-color;
+                background-color: @page-title-color;
+                border-radius: 4px;
+                padding: 16px;
+                box-shadow: inset 0 -2px 0 0 @hover-button-color;
+                &:hover{
+                    background-color: @hover-button-color;
+                    box-shadow: inset 0 -2px 0 0 @box-shadow-button-color;
+                }
+            }
+        }
+    }
+    &_section11{
+        margin-top: 32px;
+        &_lists{
+            padding-left: 0;
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+        }
+        &_item{
+            &_title{
+                color: @title-color;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 15px;
+                font-weight: 600;
+                line-height: 18.75px;
+            }
+            &_list{
+                padding-left: 0;
+                list-style: none;
+                a{
+                    color: @main-color;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 13px;
+                    font-weight: 19.5px;
+                }
+            }
+        }
+    }
+    &_section12{
+        position: relative;
+        &_hr{
+            position: absolute;
+            top:0;
+            margin: 0;
+            width: 1831px;
+            left: -277px;
         }
     }
 }

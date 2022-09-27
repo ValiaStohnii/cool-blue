@@ -275,42 +275,73 @@
                 </li>
             </ul>
         </div>
-        <div>
-            <h2>Laptops in the store</h2>
-            <ul>
-                <li>
-                    
-                        <img src="" alt="">
-                        <p>Find a store near you</p>
-                        <p>You can choose a laptop based on the hardware specifications. But it's also nice to know how sturdy the hinges are or how heavy that 17-inch laptop actually is. There's always a large stock of laptops in our stores.</p>
-                        <button>Visit one of our stores</button>
-                                          
+        <div class="category_section10">
+            <h2 class="category_section9_title">Laptops in the store</h2>
+            <ul class="category_section8_list">
+                <li class="section8_item">
+                    <img class="section8_img" src="<?=$block->getViewFileUrl('images/category/s8-1.png')?>" alt="">
+                    <p class="section8_title">Find a store near you</p>
+                    <p class="section8_text">You can choose a laptop based on the hardware specifications. But it's also nice to know how sturdy the hinges are or how heavy that 17-inch laptop actually is. There's always a large stock of laptops in our stores.</p>
+                    <button class="section10_button">Visit one of our stores</button>                  
                 </li>
-                <li>
-                   
-                        <img src="" alt="">
-                        <p>Advice by appointment</p>
-                        <p>Do you want 8GB RAM? Or do you need 32GB? Do you keep everything in the cloud or do you need internal storage? And what's the difference between M1 and M2? Make an appointment with one of our experts in our stores and they'll answer all your questions.</p>
-                        <button>Make an appointment</button>
-                    
+                <li class="section8_item">
+                    <img class="section8_img" src="<?=$block->getViewFileUrl('images/category/s5-1.png')?>" alt="">
+                    <p class="section8_title">Advice by appointment</p>
+                    <p class="section8_text">Do you want 8GB RAM? Or do you need 32GB? Do you keep everything in the cloud or do you need internal storage? And what's the difference between M1 and M2? Make an appointment with one of our experts in our stores and they'll answer all your questions.</p>
+                    <button class="section10_button">Make an appointment</button>
                 </li>
-                <li>
-                    
-                        <img src="" alt="">
-                        <p>Which laptops can you find in our stores?</p>
-                        <p>There are many laptops to view in our stores. Do you want to know if the laptop of your choice is available in our store in your area? View the page below and select the desired location. The coffee is already waiting for you.</p>
-                        <button>View these laptops in the store</button>
-                   
+                <li class="section8_item">
+                    <img class="section8_img" src="<?=$block->getViewFileUrl('images/category/s8-3.png')?>" alt="">
+                    <p class="section8_title">Which laptops can you find in our stores?</p>
+                    <p class="section8_text">There are many laptops to view in our stores. Do you want to know if the laptop of your choice is available in our store in your area? View the page below and select the desired location. The coffee is already waiting for you.</p>
+                    <button class="section10_button">View these laptops in the store</button>
                 </li>
             </ul>
         </div>
-        <div>
-            <ul>
-                <li><ul></ul></li>
-                <li><ul></ul></li>
-                <li><ul></ul></li>
-                <li><ul></ul></li>
+        <div class="category_section11">
+            <ul class="category_section11_lists">
+                <li class="category_section11_item">
+                    <h3 class="category_section11_item_title">A</h3>
+                    <ul class="category_section11_item_list">
+                        <li><a class="category_section11_item_link" href="">Acer laptops</a></li>
+                        <li><a class="category_section11_item_link" href="">Apple MacBook</a></li>
+                        <li><a class="category_section11_item_link" href="">Asus laptops</a></li>
+                    </ul>
+                </li>
+                <li class="category_section11_item">
+                    <h3 class="category_section11_item_title">B</h3>
+                    <ul class="category_section11_item_list">
+                        <li><a class="category_section11_item_link" href="">Back to School laptops</a></li>
+                        <li><a class="category_section11_item_link" href="">Best laptops according to our customers</a></li>
+                        <li><a class="category_section11_item_link" href="">Black Friday laptop deals</a></li>
+                    </ul>
+                </li>
+                <li class="category_section11_item">
+                    <h3 class="category_section11_item_title">C</h3>
+                    <ul class="category_section11_item_list">
+                        <li><a class="category_section11_item_link" href="">Cheap laptops</a></li>
+                        <li><a class="category_section11_item_link" href="">Christmas laptop deals</a></li>
+                        <li><a class="category_section11_item_link" href="">Chromebooks</a></li>
+                    </ul>
+                </li>
+                <li class="category_section11_item">
+                    <h3 class="category_section11_item_title">D</h3>
+                    <ul class="category_section11_item_list">
+                        <li><a class="category_section11_item_link" href="">Dell laptops</a></li>
+                        <li><a class="category_section11_item_link" href="">Dynabook laptops</a></li>
+                        <li><a class="category_section11_item_link" href="">Dynabook laptops</a></li>
+                    </ul>
+                </li>
             </ul>
+        </div>
+        <div class="category_section12">
+            <hr class="category_section12_hr"> 
+            <?php
+                echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('Previously_viewed')
+                ->toHtml();
+            ?>
         </div>
     </div>
 <?php endif; ?>
