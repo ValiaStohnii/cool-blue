@@ -708,4 +708,55 @@
             }
         }
     }
+    &_section9{
+        margin-top: 32px;
+        &_title{
+            color:@title-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22.5px;
+            margin-top: 0;
+        }
+        &_list{
+            padding-left: 0;
+            display: flex;
+            list-style: none;
+            .section9{
+                &_item{
+                    border: 1px solid @border-color;
+                    border-radius: 4px;
+                    margin-right: 12px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &:hover{
+                        border: 1px solid @border-hover-color;
+                        box-shadow: 0 0.6rem 0.8rem -0.3rem @box-shadow-color;
+                    }
+                }
+                &_img{
+                    background-color: @previously-background-color;
+                }
+                &_link{
+                    &:hover{
+                        text-decoration: none;
+                    }
+                    p{
+                        margin: 0;
+                    }
+                }
+                &_title{
+                    padding:16px;
+                    color: @main-color;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 13px;
+                    line-height: 19.5px;
+                    font-weight: 700;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+        }
+    }
 }
