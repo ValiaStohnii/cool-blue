@@ -1,0 +1,102 @@
+/**
+ * @author      Valia <valiastohnii@gmail.com>
+ * @copyright   Copyright (c) 2022 GmbH 
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+
+//
+//  Variables
+//  _____________________________________________
+
+@main-color: #0090e3;
+@second-color: #fff;
+@title-color: #111;
+@previously-background-color:#f2f7fc;
+@border-color:#ddd;
+@border-hover-color:#bbb;
+@box-shadow-color:#eee;
+
+.laptopswidget{
+    &_description{
+        color: @title-color;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        line-height: 19.5px;
+    }
+    &_lists{
+        margin-top: 32px;
+        padding-left: 0;
+        list-style: none;
+    }
+    &_item{
+        margin-top: 32px;
+        &_title{
+            color:@title-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22.5px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        &_list{
+            margin-top: 12px;
+            padding-left: 0;
+            display: flex;
+            list-style: none;
+            &--popular{
+                flex-wrap: wrap;
+                .list{
+                    &_item{
+                        &:nth-child(6),
+                        &:nth-child(12),
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            .list{
+                &_item{
+                    border: 1px solid @border-color;
+                    border-radius: 4px;
+                    margin-right: 12px;
+                    width: 201px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &:hover{
+                        border: 1px solid @border-hover-color;
+                        box-shadow: 0 0.6rem 0.8rem -0.3rem @box-shadow-color;
+                    }
+                }
+                &_img{
+                    background-color: @previously-background-color;
+                }
+                &_link{
+                    &:hover{
+                        text-decoration: none;
+                    }
+                    p{
+                        margin: 0;
+                    }
+                }
+                &_title{
+                    padding:16px;
+                    color: @main-color;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 13px;
+                    line-height: 19.5px;
+                    font-weight: 700;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+}
+
+.page-products .columns{
+    display: none;
+}
