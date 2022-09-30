@@ -81,14 +81,17 @@ padding-bottom: 0;
         a{
             color: @title-color;
         }
-        &::before{
-            content: '✔';
-            // background-image: url("../../../../ThemeCoolBlue/web/images/icons.svg#icon-checkmark");
-            // fill: @top-item-before-color;
-            width: 16px;
-            height: 16px;
-            color: @top-item-before-color;
-        }
+        // &::before{
+        //     content: '✔';
+        //     // background-image: url("../../../../ThemeCoolBlue/web/images/icons.svg#icon-checkmark");
+        //     // fill: @top-item-before-color;
+        //     width: 16px;
+        //     height: 16px;
+        //     color: @top-item-before-color;
+        // }
+    }
+    &_top_icon{
+        color: @top-item-before-color;
     }
     &_top_link{
         color: @title-color;
@@ -470,7 +473,6 @@ padding-bottom: 0;
         }
     }
 }
-
 .bestsellers_section{
     .products-grid{
         .product-items{

@@ -26,7 +26,7 @@
     height: 52px;   
     position: sticky;
     top: 0;
-    z-index: 99;
+    z-index: 100;
     width: 100%; 
 }
 
@@ -161,7 +161,33 @@
         font-size: 12px;
     }
 }
-
-.minicart-wrapper .action.showcart:before{
-    color: @link-header-color;
+.minicart-wrapper{
+    &:hover{
+        background-color: @link-hover-background-color;
+    }
+    .action.showcart{
+        position: relative;
+        &:before{
+            color: @link-header-color;
+        }
+        &:hover{
+            &::before{
+                color: @link-header-color;
+            }
+        }
+        .counter.qty{
+            border-radius: 50%;
+            height: 15px;
+            width: 10px;
+            line-height: 13px;
+            position: absolute;
+            right: 4.2px;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    &__icon--check{
+        fill: @link-header-color;
+        padding-top: 14px;
+    }
 }
