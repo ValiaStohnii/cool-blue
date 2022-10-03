@@ -31,6 +31,16 @@
     </button>
 
     <if args="getCartParam('summary_count')">
+        <strong class="subtitle" translate="'Recently added item(s)'"></strong>
+        <div data-action="scroll" class="minicart-items-wrapper">
+            <ol id="mini-cart" class="minicart-items" data-bind="foreach: { data: getCartItems(), as: 'item' }">
+                <each args="$parent.getRegion($parent.getItemRenderer(item.product_type))"
+                      render="{name: getTemplate(), data: item, afterRender: function() {$parents[1].initSidebar()}}"></each>
+            </ol>
+        </div>
+    </if>
+
+    <if args="getCartParam('summary_count')">
         <div class="items-total">
             <span class="count" if="maxItemsToDisplay < getCartLineItemsCount()" text="maxItemsToDisplay"></span>
             <translate args="'of'" if="maxItemsToDisplay < getCartLineItemsCount()"></translate>
@@ -63,16 +73,6 @@
                 </button>
                 <div data-bind="html: getCartParamUnsanitizedHtml('extra_actions')"></div>
             </div>
-        </div>
-    </if>
-
-    <if args="getCartParam('summary_count')">
-        <strong class="subtitle" translate="'Recently added item(s)'"></strong>
-        <div data-action="scroll" class="minicart-items-wrapper">
-            <ol id="mini-cart" class="minicart-items" data-bind="foreach: { data: getCartItems(), as: 'item' }">
-                <each args="$parent.getRegion($parent.getItemRenderer(item.product_type))"
-                      render="{name: getTemplate(), data: item, afterRender: function() {$parents[1].initSidebar()}}"></each>
-            </ol>
         </div>
     </if>
 
