@@ -92,8 +92,11 @@ padding-bottom: 0;
     }
     &_top_icon{
         color: @top-item-before-color;
+        width: 25px;
+        height: 20px;
     }
     &_top_link{
+        display: flex;
         color: @title-color;
             font-family: 'Open Sans', sans-serif;
             font-size: 13px;
@@ -145,6 +148,7 @@ padding-bottom: 0;
             margin-top: 16px;
             }
             &_item{
+                display: flex;
                 margin-bottom: 0;
                 margin-right: 16px;
                 &--smile{
@@ -155,16 +159,10 @@ padding-bottom: 0;
                         height: 16px;
                     }
                 }
-                &--facebook{
-                    &::before{
-                        content: "";
-                        color:@bottom-item-before-color;
-                        width: 16px;
-                        height: 16px;
-                    }
-                }
             }
             &_link{
+                display: flex;
+                align-items: center;
                 color: @title-color;
                 font-family: 'Open Sans', sans-serif;
                 font-size: 13px;
@@ -173,6 +171,10 @@ padding-bottom: 0;
                 &:hover{
                     text-decoration: none;
                     color: @main-color;
+                }
+                img{
+                    width: 16px;
+                    height: 16px;
                 }
             }
             &_orange{
