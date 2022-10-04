@@ -39,68 +39,78 @@
             </ol>
         </div>
     </if>
-
-    <if args="getCartParam('summary_count')">
-        <div class="items-total">
-            <span class="count" if="maxItemsToDisplay < getCartLineItemsCount()" text="maxItemsToDisplay"></span>
-            <translate args="'of'" if="maxItemsToDisplay < getCartLineItemsCount()"></translate>
-            <span class="count" text="getCartParam('summary_count').toLocaleString(window.LOCALE)"></span>
-                <!-- ko if: (getCartParam('summary_count') > 1) -->
-                    <span translate="'Items in Cart'"></span>
-                <!--/ko-->
-                <!-- ko if: (getCartParam('summary_count') === 1) -->
-                    <span translate="'Item in Cart'"></span>
-                <!--/ko-->
-        </div>
-
-        <each args="getRegion('subtotalContainer')" render=""></each>
-        <each args="getRegion('extraInfo')" render=""></each>
-
-        <div class="actions" if="getCartParam('possible_onepage_checkout')">
-            <div class="primary">
-                <button
-                        id="top-cart-btn-checkout"
-                        type="button"
-                        class="action primary checkout"
-                        data-action="close"
-                        data-bind="
-                            attr: {
-                                title: $t('Proceed to Checkout')
-                            },
-                            click: closeMinicart()
-                        "
-                        translate="'Proceed to Checkout'">
-                </button>
-                <div data-bind="html: getCartParamUnsanitizedHtml('extra_actions')"></div>
+    <div class="minicart_content_actions ">
+        <if args="getCartParam('summary_count')">
+            <div class="items-total">
+                <span class="count" if="maxItemsToDisplay < getCartLineItemsCount()" text="maxItemsToDisplay"></span>
+                <translate args="'of'" if="maxItemsToDisplay < getCartLineItemsCount()"></translate>
+                <span class="count" text="getCartParam('summary_count').toLocaleString(window.LOCALE)"></span>
+                    <!-- ko if: (getCartParam('summary_count') > 1) -->
+                        <span translate="'Items in Cart'"></span>
+                    <!--/ko-->
+                    <!-- ko if: (getCartParam('summary_count') === 1) -->
+                        <span translate="'Item in Cart'"></span>
+                    <!--/ko-->
             </div>
-        </div>
-    </if>
 
-    <ifnot args="getCartParam('summary_count')">
-        <strong class="subtitle empty"
-                translate="'Thoroughly inspected by Toby.'"></strong>
-                <div class="minicart_img">
-                    <img data-bind="attr: { src: require.toUrl('images/cat-in-box-320px.png') }" alt="cat">
-                </div>
-        <if args="getCartParam('cart_empty_message')">
-            <p class="minicart empty text" text="getCartParam('cart_empty_message')"></p>
-            <div class="actions">
-                <div class="secondary">
-                    <a class="action viewcart" data-bind="attr: {href: shoppingCartUrl}">
-                        <span translate="'View and Edit Cart'"></span>
-                    </a>
+            <div class="minicart-shipping">
+                <p class="minicart-shipping_text">Shipping</p>
+                <p class="minicart-shipping--orange">Free</p>
+            </div>
+
+            <each args="getRegion('subtotalContainer')" render=""></each>
+            <each args="getRegion('extraInfo')" render=""></each>
+
+    
+            <div class="actions" if="getCartParam('possible_onepage_checkout')">
+                <div class="primary">
+                    <button
+                            id="top-cart-btn-checkout"
+                            type="button"
+                            class="action primary checkout"
+                            data-action="close"
+                            data-bind="
+                                attr: {
+                                    title: $t('Order')
+                                },
+                                click: closeMinicart()
+                            "
+                            translate="'Order'">
+                    </button>
+                    <div data-bind="html: getCartParamUnsanitizedHtml('extra_actions')"></div>
                 </div>
             </div>
         </if>
-    </ifnot>
+    
+        <div class="minicart_content_actions_empty ">
+            <ifnot args="getCartParam('summary_count')">
+                <strong class="subtitle empty"
+                        translate="'Thoroughly inspected by Toby.'"></strong>
+                        <div class="minicart_img">
+                            <img data-bind="attr: { src: require.toUrl('images/cat-in-box-320px.png') }" alt="cat">
+                        </div>
+                <if args="getCartParam('cart_empty_message')">
+                    <p class="minicart empty text" text="getCartParam('cart_empty_message')"></p>
+                    <div class="actions">
+                        <div class="secondary">
+                            <a class="action viewcart" data-bind="attr: {href: shoppingCartUrl}">
+                                <span translate="'Edit shopping cart'"></span>
+                            </a>
+                        </div>
+                    </div>
+                </if>
+            </ifnot>
+        </div>
 
-    <div class="actions" if="getCartParam('summary_count')">
-        <div class="secondary">
-            <a class="action viewcart" data-bind="attr: {href: shoppingCartUrl}">
-                <span translate="'View and Edit Cart'"></span>
-            </a>
+        <div class="actions" if="getCartParam('summary_count')">
+            <div class="secondary">
+                <a class="action viewcart" data-bind="attr: {href: shoppingCartUrl}">
+                    <span translate="'Edit shopping cart'"></span>
+                </a>
+            </div>
         </div>
     </div>
+
 
     <div id="minicart-widgets" class="minicart-widgets" if="regionHasElements('promotion')">
         <each args="getRegion('promotion')" render=""></each>
