@@ -18,6 +18,7 @@ use Magento\Framework\App\Action\Action;
 <?php
 $_productCollection = $block->getLoadedProductCollection();
 /** @var \Magento\Catalog\Helper\Output $_helper */
+$productIndex = 0;
 $_helper = $block->getData('outputHelper');
 ?>
 <?php if (!$_productCollection->count()): ?>
@@ -156,6 +157,67 @@ $_helper = $block->getData('outputHelper');
                     'product-item-info_' . $_product->getId() . ' div.product-item-actions'
                 ) : '' ?>
             </li>
+            <?php if ($productIndex++ === 1):?>
+                <div class="list_divider">
+                   <?php
+                        echo $this->getLayout()
+                        ->createBlock('Magento\Cms\Block\Block')
+                        ->setBlockId('divider_list')
+                        ->toHtml();
+                   ?>
+                </div>
+            <?php endif; ?>
+
+            <?php if ($productIndex === 5):?>
+                <div class="list_divider_section3">
+                    <p class="list_divider_section3_title">Featured brands for Windows laptops</p>
+            <ul class="category_section3_list">
+                <li class="section3_item">
+                    <a href="" class="section3_link">
+                        <img src="<?=$block->getViewFileUrl('images/category/hp-logo.png')?>" alt="" class="section3_link_img">
+                    </a>
+                </li>
+                <li class="section3_item">
+                    <a href="" class="section3_link">
+                        <img src="<?=$block->getViewFileUrl('images/category/lenovo-logo.png')?>" alt="" class="section3_link_img">
+                    </a>
+                </li>
+                <li class="section3_item">
+                    <a href="" class="section3_link">
+                        <img src="<?=$block->getViewFileUrl('images/category/acer-logo.png')?>" alt="" class="section3_link_img">
+                    </a>
+                </li>
+                <li class="section3_item">
+                    <a href="" class="section3_link">
+                        <img src="<?=$block->getViewFileUrl('images/category/asus-logo.png')?>" alt="" class="section3_link_img">
+                    </a>
+                </li>
+                <li class="section3_item">
+                    <a href="" class="section3_link">
+                        <img src="<?=$block->getViewFileUrl('images/category/samsung-logo.png')?>" alt="" class="section3_link_img section3_link_img--samsung">
+                    </a>
+                </li>
+                <li class="section3_item">
+                    <a href="" class="section3_link">
+                        <img src="<?=$block->getViewFileUrl('images/category/msi-logo.png')?>" alt="" class="section3_link_img">
+                    </a>
+                </li>
+            </ul>
+        </div>
+            <?php endif; ?>
+
+            <?php if ((($productIndex - 5) % 6) === 0):?>
+                <div class="list_divider">
+                   <?php
+                        echo $this->getLayout()
+                        ->createBlock('Magento\Cms\Block\Block')
+                        ->setBlockId('divider_list')
+                        ->toHtml();
+                   ?>
+                </div>
+            <?php endif; ?>
+
+            
             <?php endforeach; ?>
         </ol>
     </div>

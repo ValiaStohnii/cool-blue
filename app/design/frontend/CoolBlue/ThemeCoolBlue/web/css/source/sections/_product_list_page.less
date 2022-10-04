@@ -1,0 +1,54 @@
+/**
+ * @author      Valia <valiastohnii@gmail.com>
+ * @copyright   Copyright (c) 2022 GmbH 
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+
+.products-grid {
+    box-shadow: none !important;
+    border: transparent;
+    .product-item-info {
+            box-shadow: none !important;
+        &:hover {
+            box-shadow: none !important;
+            padding: 0;
+            margin: 0;
+        }
+        &:hover {
+            border: 0 !important;
+            box-shadow: none;
+        }
+        &:not(:hover):not(.active) {
+            box-shadow: none !important;
+            border: transparent;
+            .product-item-inner {
+                position: relative;
+                height: auto;
+                width: auto;
+                border: none;
+                overflow: unset;
+                box-shadow: none;
+                &:hover {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+.page-with-filter {
+    .product-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        .product-item {
+            width: 31%;
+        }
+    }
+}
+.products-grid .product-item-info:hover .product-item-inner {
+    border: none;
+    box-shadow: none;
+    margin-top: 0;
+    padding: 0;
+}
