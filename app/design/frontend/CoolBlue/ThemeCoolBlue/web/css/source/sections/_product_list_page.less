@@ -4,6 +4,8 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
 */
 
+@title-color: #111;
+
 .products-grid {
     box-shadow: none !important;
     border: transparent;
@@ -51,4 +53,74 @@
     box-shadow: none;
     margin-top: 0;
     padding: 0;
+}
+
+.product_page_img{
+    position: absolute;
+    top: 62px;
+    right: 0;
+    width: 302px;
+    border-radius: 4px;
+}
+.modes{
+    display: none;
+}
+
+.toolbar-products {
+    display: flex;
+    justify-content: flex-end;
+
+    .toolbar-amount{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        line-height: 19.5px;
+        padding: 0 6px 0 0;
+        border-right: 1px solid #ddd;
+        margin-right: 8px;
+        margin: 6px;
+        .toolbar-number{
+            font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        line-height: 19.5px;
+        font-weight: 700;
+        }
+    }
+}
+
+.page-layout-2columns-left{
+    .page-title-wrapper{
+        position: absolute;
+    }
+    .block-static-block.widget{
+        display: none;
+    }
+    .sidebar-main{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .breadcrumbs{
+        padding-right: 92px;
+        padding-left: 0;
+
+        a{
+            color: @title-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            &:hover{
+                color: @title-color;
+            }
+        }
+
+        .item:not(:last-child):after{
+            display: none;
+        }
+        .item:not(:last-child):before{
+            content: '<';
+            width: 10px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+    }
 }
