@@ -7,6 +7,13 @@
 -->
 <layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
     <update handle="1column"/>
+    <referenceContainer name="page.top"> 
+        <block class="Magento\Cms\Block\Block" name="top_list"> 
+            <arguments> 
+                <argument name="block_id" xsi:type="string">top_list</argument> 
+            </arguments> 
+        </block> 
+    </referenceContainer>
     <referenceContainer name="columns">
         <container name="div.sidebar.main" htmlTag="div" htmlClass="sidebar sidebar-main" after="main">
             <container name="sidebar.main" as="sidebar_main" label="Sidebar Main"/>
@@ -18,4 +25,5 @@
     <move element="page.main.title" destination="content" before="-"/>
     <move element="breadcrumbs" destination="sidebar.main" before="-"/>
     <referenceContainer name="div.sidebar.additional" remove="true"/>
+    <referenceContainer name="navigation.sections" remove="true"/>
 </layout>

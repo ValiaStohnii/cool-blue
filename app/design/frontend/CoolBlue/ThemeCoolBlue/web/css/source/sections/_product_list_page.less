@@ -5,6 +5,17 @@
 */
 
 @title-color: #111;
+@main-color: #0090e3;
+@background-nav-color: #f2f7fc;
+@second-color: #fff;
+
+
+
+.top_list_row {
+    width: 101%;
+    margin-top: 16px;
+    margin-right: 190px;
+}
 
 .products-grid {
     box-shadow: none !important;
@@ -71,18 +82,116 @@
     justify-content: flex-end;
 
     .toolbar-amount{
+        color: @title-color;
         font-family: 'Open Sans', sans-serif;
         font-size: 13px;
         line-height: 19.5px;
         padding: 0 6px 0 0;
         border-right: 1px solid #ddd;
-        margin-right: 8px;
-        margin: 6px;
+        margin: 7px;
         .toolbar-number{
+            color: @title-color;
             font-family: 'Open Sans', sans-serif;
         font-size: 13px;
         line-height: 19.5px;
         font-weight: 700;
+        }
+    }
+    .sorter-label{
+        color: @title-color;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        line-height: 19.5px;
+    }
+    
+        .sorter-options {
+            background-color: #ffff;
+            box-shadow: none;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            height: 35px;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            line-height: 19.5px;
+            &:hover{
+                border: 1px solid #bbb;
+            }
+        }
+   
+    .sorter-action{
+        display: none;
+    }
+    .field.limiter{
+        display: none !important;
+    }
+    .pages{
+        margin-right: 45%;
+        .pages-items{
+            .item.current{
+                border: 2px solid @main-color;
+                border-radius: 4px;
+                width: 40px;
+                height: 40px;
+                background-color: @background-nav-color;
+                strong{
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 13px;
+                    line-height: 19.5px;
+                    font-weight: 700;
+                    color: @title-color;
+                    background-color: @background-nav-color;
+                    transform: translateY(13%);
+                }
+                &:hover{
+                    border: 2px solid @main-color;
+                }
+            }
+            .item{
+                width: 40px;
+                height: 40px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                background-color: @second-color;
+                &:hover{
+                    cursor: pointer;
+                    border: 1px solid #bbb;
+                }
+                a{
+                    color: @main-color;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 13px;
+                    line-height: 19.5px;
+                    transform: translateY(13%);
+                }
+                .action.next{
+                    margin: 0;
+                    &:before{
+                        content: 'Next >';
+                        color: @main-color;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 13px;
+                        line-height: 19.5px;
+                    }
+                }
+                .action{
+                    border: none;
+                    box-shadow: none;
+                    background: none;
+                }
+                .action.previous:before{
+                    content: '<';
+                    color: @main-color;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 20px;
+                        line-height: 19.5px;
+                        font-weight: 700;
+                        margin-right: -10px;
+                }
+            }
+            .item.pages-item-next{
+                width: 55px;
+            }
         }
     }
 }
@@ -90,6 +199,7 @@
 .page-layout-2columns-left{
     .page-title-wrapper{
         position: absolute;
+        top: -3px;
     }
     .block-static-block.widget{
         display: none;
@@ -122,5 +232,8 @@
             font-weight: 700;
             margin-right: 5px;
         }
+    }
+    .columns .column.main {
+        padding-left: 0;
     }
 }
