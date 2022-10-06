@@ -8,6 +8,11 @@
                 <argument name="block_id" xsi:type="string">top_list</argument> 
             </arguments> 
         </block> 
+        <block class="Magento\Cms\Block\Block" name="category_nav"> 
+            <arguments> 
+                <argument name="block_id" xsi:type="string">category_nav</argument> 
+            </arguments> 
+        </block>
     </referenceContainer>
     <referenceContainer name="navigation.sections" remove="true"/>
     <referenceContainer name="columns" remove="true"/>
