@@ -17,7 +17,11 @@
         <div class="block-title filter-title">
             <strong><?= $block->escapeHtml(__('Shop By')) ?></strong>
         </div>
-
+        <div class="filter_input">
+            <input class="filter_input_search" type="text" placeholder="Search for...">
+            <a class="filter_input_link" href="">
+            <img src="<?=$block->getViewFileUrl('images/search-icon-lob.png')?>" alt="search" class="filter_input_img">    </a>      
+        </div>
         <div class="block-content filter-content">
             <?= $block->getChildHtml('state') ?>
 
