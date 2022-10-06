@@ -1,0 +1,141 @@
+/**
+ * @author      Valia <valiastohnii@gmail.com>
+ * @copyright   Copyright (c) 2022 GmbH 
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+
+//
+//  Variables
+//  _____________________________________________
+
+@main-color: #0090e3;
+@second-color: #fff;
+@accent-color: #f60;
+@title-color: #111;
+
+
+.page-product-configurable.catalog-product-view{
+    .column.main{
+        position: relative;
+    }
+    .product_main_rewiew{
+        width: 405px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 79px;
+        right: 0;
+
+        input{
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            &:hover{
+                border: 1px solid #bbb;
+            }
+        }
+        &_title{
+            color: @title-color;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 16.25px;
+        }
+        &_box{
+            display: flex;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 11px 15px;
+            &:hover{
+                border: 1px solid #bbb;
+            }
+            p{
+                color: @title-color;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13px;
+                line-height: 19.5px;
+            }
+            a{
+                color: @main-color;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13px;
+                line-height: 19.5px;
+            }
+        }
+        &_img{
+            width: 48px;
+            height: 48px;
+            margin-right: 10px;
+        }
+        &_price{
+            margin-left: 25px;
+            color: #ddd;
+        }
+    }
+    .product_main_limited{
+        display: flex;
+        &_orange{
+            color: @accent-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            line-height: 19.5px;
+            font-weight: 700;
+        }
+        &_text{
+            color: @title-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            line-height: 19.5px;
+        }
+        a{
+            color: @main-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            line-height: 19.5px;
+        }
+        p{
+            margin-bottom: 0;
+        }
+        &_img{
+            width: 16px;
+            height: 16px;
+            padding-top: 2px;
+            margin-right: 8px;
+        }
+    }
+    .product-info-main{
+        margin-top: 210px;
+        width: 405px;
+        .product-info-price{
+            border-bottom: none;
+            margin: 0;
+            .price{
+                color: @title-color;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 20px;
+            }
+            .price-label{
+                display: none;
+            }
+        }
+        .product-info-stock-sku{
+            display: none;
+        }
+        .product-add-form{
+            .fieldset{
+                margin: 0;
+            }
+            .swatch-opt{
+                display: flex;
+                margin: 0;
+                .swatch-attribute.size{
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+} 
