@@ -200,6 +200,42 @@
                 }
             }
         }
+        .order_info{
+            &_list{
+                list-style: none;
+                padding-left: 0;
+            }
+            &_link{
+                color: @title-color;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 13px;
+                    line-height: 19.5px;
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 0px;
+                    &:hover{
+                        text-decoration: none;
+                        color: @main-color;
+                    }
+            }
+            &_img{
+                width: 25px;
+                height: 20px;
+            }
+            &_orange{
+                color: @accent-color;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 13px;
+                    line-height: 19.5px;
+                    font-weight: 700;
+                    margin-left: 3px;
+                    margin-right: 3px;
+                    &:hover{
+                        text-decoration: none;
+                        color: @accent-color;
+                    }
+            }
+        }
     }
 } 
 .page-product-configurable.catalog-product-view{
@@ -210,4 +246,9 @@
             }
         }
     }
+}
+
+.fotorama__thumb-border{
+    border-radius: 4px;
+    border-color: @main-color;
 }
