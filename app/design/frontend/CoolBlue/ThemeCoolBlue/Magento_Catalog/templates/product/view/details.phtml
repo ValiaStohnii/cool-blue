@@ -20,6 +20,15 @@
                 <li class="detailed_nav_item"><a class="detailed_nav_link" href="">Specifications</a></li>
             </ul>
         </div>
+        <div class="purchase_block">
+            <h2 class="purchase_block_title">Complete your purchase</h2>
+            <?php
+                echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('purchase')
+                ->toHtml();
+            ?>
+        </div>
         <?php $layout = $block->getLayout(); ?>
         <div class="product data items" data-mage-init='{"tabs":{"openedState":"active"}}'>
             <?php foreach ($detailedInfoGroup as $name):?>
