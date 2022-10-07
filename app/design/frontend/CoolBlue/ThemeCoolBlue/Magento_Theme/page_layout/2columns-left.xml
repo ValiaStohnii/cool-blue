@@ -29,6 +29,6 @@
     </referenceContainer>
     <move element="page.main.title" destination="content" before="-"/>
     <move element="breadcrumbs" destination="sidebar.main" before="-"/>
-    <referenceContainer name="div.sidebar.additional" remove="true"/>
+    <referenceContainer name="div.sidebar.additional" remove="true"/> 
     <referenceContainer name="navigation.sections" remove="true"/>
 </layout>
