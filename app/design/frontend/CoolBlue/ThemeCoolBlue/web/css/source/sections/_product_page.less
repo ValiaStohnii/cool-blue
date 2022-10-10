@@ -19,6 +19,7 @@
 @border-hover-color:#bbb;
 @box-shadow-color:#eee;
 @previously-background-color:#f2f7fc;
+@table-tr: #f3f3f3;
 
 
 .catalog-product-view{
@@ -331,6 +332,9 @@
 
                 }
             }
+            &_columns{
+                margin-bottom: 12px;
+            }
             &_column{
                 p{
                     margin-bottom: 0;
@@ -347,6 +351,10 @@
                     font-weight: 700;
                     margin-bottom: 8px;
                     margin-top: 8px;
+                    margin: 0;
+                    p{
+                        margin: 0;
+                    }
                 }
                 &_text{
                     color: @border-hover-color;
@@ -354,6 +362,98 @@
                     font-size: 13px;
                     line-height: 19.5px;
                     margin-bottom: 8px;
+                }
+                &_green{
+                    color: @previously-button-color;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 13px;
+                    line-height: 19.5px;
+                    font-weight: 700;
+
+                    p{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        
+                    }
+                    
+                }
+                &_button{
+                    .pagebuilder-button-primary{
+                        background-color: @action-primary-tocart;
+                        box-shadow: inset 0 -2px 0 0 @previously-button-color;
+                        color: @second-color;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 13px;
+                        line-height: 19.5px;
+                        font-weight: 700;
+                        border-color: @action-primary-tocart;
+                        border-radius: 4px;
+                        width: 300px;
+                        padding: 15px 16px;
+                        margin: 0;
+                        &:hover{
+                            background-color: @previously-button-color;
+                            box-shadow: inset 0 -2px 0 0 @previously-button-hover-color;
+                        }
+                    }
+                }
+            }
+        }
+        .product_info{
+            display: flex;
+            position: relative;
+            &_img{
+                width: 200px;
+                position: absolute;
+                top: 0;
+                right: 455px;
+            }
+            .data.item.title{
+                margin-bottom: 12px;
+                a{
+                    color: @title-color;
+                }
+                font-family: 'Open Sans', sans-serif;
+                font-size: 15px;
+                line-height: 19.5px;
+                font-weight: 700;
+            }
+            .product.attribute.description{
+                .value{
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+            }
+            .additional-attributes-wrapper.table-wrapper{
+                .data.table.additional-attributes{
+                    width: 410px;
+                    tr:nth-child(odd){
+                        background-color: @second-color ;
+                    }
+                    tr:nth-child(2n){
+                        background-color: @table-tr ;
+                    }
+                    .col{
+                        color: @title-color;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 13px;
+                        line-height: 19.5px;
+                    }
+                    .col.label{
+                        &:before{
+                            content: 'i';
+                            background-color: @main-color;
+                            border-radius: 50%;
+                            color: @second-color;
+                            margin-right: 5px;
+                            margin-left: 5px;
+                            padding: 0.5px 8px;
+                        }
+                    }
+                    th{
+                        font-weight: normal;
+                    }
                 }
             }
         }
