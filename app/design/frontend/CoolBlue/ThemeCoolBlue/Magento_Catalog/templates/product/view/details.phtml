@@ -1,131 +1,241 @@
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
+ * @author      Valia <valiastohnii@gmail.com>
+ * @copyright   Copyright (c) 2022 GmbH 
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
 
 /** @var \Magento\Catalog\Block\Product\View\Details $block */
 ?>
 <?php if ($detailedInfoGroup = $block->getGroupSortedChildNames('detailed_info', 'getChildHtml')):?>
-
     <div class="product info detailed">
-        <div class="detailed_nav_block">
-            <ul class="detailed_nav_list">
-                <li class="detailed_nav_item"><a class="detailed_nav_link" href="#purchase_block">Recommended combination</a></li>
-                <li class="detailed_nav_item"><a class="detailed_nav_link" href="#product_info">Product information</a></li>
-                <li class="detailed_nav_item"><a class="detailed_nav_link" href="">Accessories</a></li>
-                <li class="detailed_nav_item"><a class="detailed_nav_link" href="">Highlighted</a></li>
-                <li class="detailed_nav_item"><a class="detailed_nav_link" href="">Reviews</a></li>
-                <li class="detailed_nav_item"><a class="detailed_nav_link" href="">Insurance</a></li>
-                <li class="detailed_nav_item"><a class="detailed_nav_link" href="">Specifications</a></li>
-            </ul>
-        </div>
-        <div class="purchase_block" id="purchase_block">
-            <h2 class="purchase_block_title">Complete your purchase</h2>
-            <?php
-                echo $this->getLayout()
-                ->createBlock('Magento\Cms\Block\Block')
-                ->setBlockId('purchase')
-                ->toHtml();
-            ?>
-        </div>
-        <?php $layout = $block->getLayout(); ?>
-        <h2 class="purchase_block_title" id="product_info">Product information</h2>
-        <div class="product_info">
-            <img src="<?=$block->getViewFileUrl('images/man.png')?>" alt="" class="product_info_img">
-            <?php foreach ($detailedInfoGroup as $name):?>
-                <?php
-                $html = $layout->renderElement($name);
-                if (!$html || !trim($html)) {
-                    continue;
-                }
-                $alias = $layout->getElementAlias($name);
-                $label = $block->getChildData($alias, 'title');
-                ?>
+            <div class="product_sticky">
                 <div>
-                    <div class="data item title"
-                        data-role="collapsible" id="tab-label-<?= $block->escapeHtmlAttr($alias) ?>">
-                        <a class="data switch"
-                        tabindex="-1"
-                        data-toggle="trigger"
-                        href="#<?= $block->escapeUrl($alias) ?>"
-                        id="tab-label-<?= $block->escapeHtmlAttr($alias) ?>-title">
-                            <?= /* @noEscape */ $label ?>
-                        </a>
-                    </div>
-                    <div class="data item content"
-                        aria-labelledby="tab-label-<?= $block->escapeHtmlAttr($alias) ?>-title"
-                        id="<?= $block->escapeHtmlAttr($alias) ?>" data-role="content">
-                        <?= /* @noEscape */ $html ?>
+                    <img src="<?=$block->getViewFileUrl('images/category/s4-3.png')?>" alt="" class="product_info_img">
+                    <div>
+                        <p>Asus Vivobook 15 M1502IA-EJ137W</p>
+                        <ul>
+                            <li>
+                                <a href="">Free delivery</a>
+                            </li>
+                            <li>
+                                <a href="">Free exchange</a>
+                            </li>
+                            <li>
+                                <a href="">14 stores</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            <?php endforeach;?>
+                <div>
+                    <p>779,-</p>
+                    <button>In my shopping cart</button>
+                    <button>
+                        <svg class="" width="16px" height="16px">
+                            <use href="<?=$block->getViewFileUrl('images/icons.svg#icon-heart')?>"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="detailed_nav_block">
+                <ul class="detailed_nav_list">
+                    <li class="detailed_nav_item"><a class="detailed_nav_link" href="#purchase_block">Recommended combination</a></li>
+                    <li class="detailed_nav_item"><a class="detailed_nav_link" href="#product_info">Product information</a></li>
+                    <li class="detailed_nav_item"><a class="detailed_nav_link" href="">Accessories</a></li>
+                    <li class="detailed_nav_item"><a class="detailed_nav_link" href="">Highlighted</a></li>
+                    <li class="detailed_nav_item"><a class="detailed_nav_link" href="">Reviews</a></li>
+                    <li class="detailed_nav_item"><a class="detailed_nav_link" href="">Insurance</a></li>
+                    <li class="detailed_nav_item"><a class="detailed_nav_link" href="">Specifications</a></li>
+                </ul>
+            </div>
+            <div class="purchase_block" id="purchase_block">
+                <h2 class="purchase_block_title">Complete your purchase</h2>
+                <?php
+                    echo $this->getLayout()
+                    ->createBlock('Magento\Cms\Block\Block')
+                    ->setBlockId('purchase')
+                    ->toHtml();
+                ?>
+            </div>
+            <?php $layout = $block->getLayout(); ?>
+            <h2 class="purchase_block_title" id="product_info">Product information</h2>
+            <div class="product_info">
+                <img src="<?=$block->getViewFileUrl('images/man.png')?>" alt="" class="product_info_img">
+                <?php foreach ($detailedInfoGroup as $name):?>
+                    <?php
+                    $html = $layout->renderElement($name);
+                    if (!$html || !trim($html)) {
+                        continue;
+                    }
+                    $alias = $layout->getElementAlias($name);
+                    $label = $block->getChildData($alias, 'title');
+                    ?>
+                    <div>
+                        <div class="data item title"
+                            data-role="collapsible" id="tab-label-<?= $block->escapeHtmlAttr($alias) ?>">
+                            <a class="data switch"
+                            tabindex="-1"
+                            data-toggle="trigger"
+                            href="#<?= $block->escapeUrl($alias) ?>"
+                            id="tab-label-<?= $block->escapeHtmlAttr($alias) ?>-title">
+                                <?= /* @noEscape */ $label ?>
+                            </a>
+                        </div>
+                        <div class="data item content"
+                            aria-labelledby="tab-label-<?= $block->escapeHtmlAttr($alias) ?>-title"
+                            id="<?= $block->escapeHtmlAttr($alias) ?>" data-role="content">
+                            <?= /* @noEscape */ $html ?>
+                        </div>
+                    </div>
+                <?php endforeach;?>
+            </div>
+            <!-- <div class="product data items" data-mage-init='{"tabs":{"openedState":"active"}}'>
+            </div> -->
+        
+        <div class="product_accessories">
+                <h2 class="product_accessories_title">Suitable accessories</h2>
+                <ul class="product_accessories_list">
+                    <li class="product_accessories_item">
+                        <a href="" class="product_accessories_link">
+                            <div class="product_accessories_picture">
+                                <img src="<?=$block->getViewFileUrl('images/product/1593152.png')?>" alt="" class="product_accessories_img">
+                            </div>
+                            <p class="product_accessories_link_title">Laptop sleeves</p>
+                        </a>                       
+                    </li>
+                    <li class="product_accessories_item">
+                        <a href="" class="product_accessories_link">
+                            <div class="product_accessories_picture">
+                                <img src="<?=$block->getViewFileUrl('images/product/1537468.png')?>" alt="" class="product_accessories_img">
+                            </div>
+                            <p class="product_accessories_link_title">Monitors</p>
+                        </a> 
+                    </li>
+                    <li class="product_accessories_item">
+                        <a href="" class="product_accessories_link">
+                            <div class="product_accessories_picture">
+                                <img src="<?=$block->getViewFileUrl('images/product/1620646.png')?>" alt="" class="product_accessories_img">
+                            </div>
+                            <p class="product_accessories_link_title">Mouses</p>
+                        </a> 
+                    </li>
+                    <li class="product_accessories_item">
+                        <a href="" class="product_accessories_link">
+                            <div class="product_accessories_picture">
+                                <img src="<?=$block->getViewFileUrl('images/product/1352862.png')?>" alt="" class="product_accessories_img">
+                            </div>
+                            <p class="product_accessories_link_title">Muismatten</p>
+                        </a>
+                    </li>
+                </ul>
+                <a class="product_accessories_links" href="">> View all accessories</a>
         </div>
-        <!-- <div class="product data items" data-mage-init='{"tabs":{"openedState":"active"}}'>
-        </div> -->
-    </div>
-    <div class="product_accessories">
-            <h2 class="product_accessories_title">Suitable accessories</h2>
-            <ul class="product_accessories_list">
-                <li class="product_accessories_item">
-                    <a href="" class="product_accessories_link">
-                        <div class="product_accessories_picture">
-                            <img src="<?=$block->getViewFileUrl('images/product/1593152.png')?>" alt="" class="product_accessories_img">
-                        </div>
-                        <p class="product_accessories_link_title">Laptop sleeves</p>
-                    </a>                       
-                </li>
-                <li class="product_accessories_item">
-                    <a href="" class="product_accessories_link">
-                        <div class="product_accessories_picture">
-                            <img src="<?=$block->getViewFileUrl('images/product/1537468.png')?>" alt="" class="product_accessories_img">
-                        </div>
-                        <p class="product_accessories_link_title">Monitors</p>
-                    </a> 
-                </li>
-                <li class="product_accessories_item">
-                    <a href="" class="product_accessories_link">
-                        <div class="product_accessories_picture">
-                            <img src="<?=$block->getViewFileUrl('images/product/1620646.png')?>" alt="" class="product_accessories_img">
-                        </div>
-                        <p class="product_accessories_link_title">Mouses</p>
-                    </a> 
-                </li>
-                <li class="product_accessories_item">
-                    <a href="" class="product_accessories_link">
-                        <div class="product_accessories_picture">
-                            <img src="<?=$block->getViewFileUrl('images/product/1352862.png')?>" alt="" class="product_accessories_img">
-                        </div>
-                        <p class="product_accessories_link_title">Muismatten</p>
-                    </a>
-                </li>
-            </ul>
-            <a class="product_accessories_links" href="">> View all accessories</a>
-    </div>
-    <div class="product_highlighted">
-            <h2 class="product_highlighted_title">Highlighted</h2>
-            <ul class="product_highlighted_list">
-                <li class="product_highlighted_item">
-                    <a href="" class="product_highlighted_link">
-                        <img src="<?=$block->getViewFileUrl('images/category/s4-2.png')?>" alt="" class="product_highlighted_img">
-                        <p class="product_highlighted_link_title">Get the most out of your laptop with Microsoft Office</p>
-                        <p class="product_highlighted_link_text">Complete your laptop with the right Microsoft Office suite. We'll tell you what you should pay attention to when making the choice here.</p>
-                    </a>                       
-                </li>
-                <li class="product_highlighted_item">
-                    <a href="" class="product_highlighted_link">
-                        <img src="<?=$block->getViewFileUrl('images/product/norton.png')?>" alt="" class="product_highlighted_img">
-                        <p class="product_highlighted_link_title">Get one year of Norton 360 for free when you purchase your laptop</p>
-                        <p class="product_highlighted_link_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ullam consequuntur ea eius alias possimus.</p>
-                    </a> 
-                </li>
-                <li class="product_highlighted_item">
-                    <a href="" class="product_highlighted_link">
-                        <img src="<?=$block->getViewFileUrl('images/category/s8-2.png')?>" alt="" class="product_highlighted_img">
-                        <p class="product_highlighted_link_title">Find the right size for you</p>
-                        <p class="product_highlighted_link_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita asperiores nostrum tenetur ipsam praesentium maxime.</p>
-                    </a> 
-                </li>
-            </ul>
+        <div class="product_highlighted">
+                <h2 class="product_highlighted_title">Highlighted</h2>
+                <ul class="product_highlighted_list">
+                    <li class="product_highlighted_item">
+                        <a href="" class="product_highlighted_link">
+                            <img src="<?=$block->getViewFileUrl('images/category/s4-2.png')?>" alt="" class="product_highlighted_img">
+                            <p class="product_highlighted_link_title">Get the most out of your laptop with Microsoft Office</p>
+                            <p class="product_highlighted_link_text">Complete your laptop with the right Microsoft Office suite. We'll tell you what you should pay attention to when making the choice here.</p>
+                        </a>                       
+                    </li>
+                    <li class="product_highlighted_item">
+                        <a href="" class="product_highlighted_link">
+                            <img src="<?=$block->getViewFileUrl('images/product/norton.png')?>" alt="" class="product_highlighted_img">
+                            <p class="product_highlighted_link_title">Get one year of Norton 360 for free when you purchase your laptop</p>
+                            <p class="product_highlighted_link_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ullam consequuntur ea eius alias possimus.</p>
+                        </a> 
+                    </li>
+                    <li class="product_highlighted_item">
+                        <a href="" class="product_highlighted_link">
+                            <img src="<?=$block->getViewFileUrl('images/category/s8-2.png')?>" alt="" class="product_highlighted_img">
+                            <p class="product_highlighted_link_title">Find the right size for you</p>
+                            <p class="product_highlighted_link_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita asperiores nostrum tenetur ipsam praesentium maxime.</p>
+                        </a> 
+                    </li>
+                </ul>
         </div>
+        <div class="product_insure_receive">
+            <div class="product_insure">
+                <div class="product_insure_block">
+                    <h2 class="product_insure_title">Insure your laptop</h2>
+                    <p class="product_insure_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo architecto repudiandae at officia maiores perspiciatis, atque iste dignissimos officiis eos!</p>
+                    <ul class="product_insure_list">
+                        <li class="product_insure_item">
+                            <p class="product_insure_text">2-year Backup Plan Damage</p>
+                            <p class="product_insure_txt">39,90 one-time payment</p>
+                        </li>
+                        <li class="product_insure_item">
+                            <p class="product_insure_text">2-year Backup Plan Damage</p>
+                            <p class="product_insure_txt">39,90 one-time payment</p>
+                        </li>
+                        <li class="product_insure_item">
+                            <p class="product_insure_text">2-year Backup Plan Damage</p>
+                            <p class="product_insure_txt">39,90 one-time payment</p>
+                        </li>
+                        <li class="product_insure_item">
+                            <p class="product_insure_text">2-year Backup Plan Damage</p>
+                            <p class="product_insure_txt">39,90 one-time payment</p>
+                        </li>
+                    </ul>
+                </div>
+                <img src="<?=$block->getViewFileUrl('images/category/s4-3.png')?>" alt="" class="product_insure_img">
+            </div>
+            <div>
+                <div class="product_receive">
+                    <div>
+                        <h2 class="product_insure_title">Receive 1 year of Norton for free with a laptop or desktop</h2>
+                        <p class="product_insure_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam illum repellendus incidunt, unde quidem corrupti reprehenderit cumque doloremque explicabo fugiat quibusdam? Totam dolorem quidem alias reprehenderit.</p>
+                    </div>
+                    <img src="<?=$block->getViewFileUrl('images/product/460467.png')?>" alt="" class="product_insure_img">
+                </div>
+                <div class="product_receive">
+                    <div>
+                        <h2 class="product_insure_title">Koop Microsoft 365 bij een laptop en krijg 3 maanden extra</h2>
+                        <p class="product_insure_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis tempora quos minus, similique ut maxime cum, cumque laboriosam molestiae quasi et magnam natus asperiores cupiditate ullam voluptate veniam quam quod.</p>
+                    </div>
+                    <img src="<?=$block->getViewFileUrl('images/product/254889.png')?>" alt="" class="product_insure_img">
+                </div>
+            </div>
+        </div>
+        <div class="product_specification">
+            <h2 class="product_specification_title">Specifications</h2>
+            <div class="product_specification_input">
+                <input class="product_specification_input_search" type="text" placeholder="Search for specification...">
+                <a class="product_specification_input_link" href="">
+                    <img src="<?=$block->getViewFileUrl('images/search-icon-lob.png')?>" alt="search" class="product_specification_input_img">    
+                </a>
+            </div>
+            <div class="product_info">
+                <?php foreach ($detailedInfoGroup as $name):?>
+                    <?php
+                    $html = $layout->renderElement($name);
+                    if (!$html || !trim($html)) {
+                        continue;
+                    }
+                    $alias = $layout->getElementAlias($name);
+                    $label = $block->getChildData($alias, 'title');
+                    ?>
+                    <div>
+                        <div class="data item title"
+                            data-role="collapsible" id="tab-label-<?= $block->escapeHtmlAttr($alias) ?>">
+                            <a class="data switch"
+                            tabindex="-1"
+                            data-toggle="trigger"
+                            href="#<?= $block->escapeUrl($alias) ?>"
+                            id="tab-label-<?= $block->escapeHtmlAttr($alias) ?>-title">
+                                <?= /* @noEscape */ $label ?>
+                            </a>
+                        </div>
+                        <div class="data item content"
+                            aria-labelledby="tab-label-<?= $block->escapeHtmlAttr($alias) ?>-title"
+                            id="<?= $block->escapeHtmlAttr($alias) ?>" data-role="content">
+                            <?= /* @noEscape */ $html ?>
+                        </div>
+                    </div>
+                <?php endforeach;?>
+            </div>
+        </div>
+    </div>
 <?php endif; ?>

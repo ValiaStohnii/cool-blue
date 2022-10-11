@@ -216,6 +216,11 @@
                 </block>
             </block>
             <block class="Magento\Catalog\Block\Product\View\Additional" name="product.info.additional" as="product_additional_data"/>
+            <block class="Magento\Cms\Block\Block" name="Previously_viewed" after="-"> 
+                <arguments> 
+                    <argument name="block_id" xsi:type="string">Previously_viewed</argument> 
+                </arguments> 
+            </block>
         </referenceContainer>
         <referenceBlock name="product.info.addtocart">
             <block class="Magento\Catalog\Block\ShortcutButtons\InCatalog" name="addtocart.shortcut.buttons"/>
