@@ -458,12 +458,123 @@
             }
         }
     }
-} 
-.page-product-configurable.catalog-product-view{
     .product-info-main{
         .product-info-price{
             .price-label{
                 display: none;
+            }
+        }
+    }
+    .product_accessories{
+        margin-bottom: 32px;
+        &_title{
+            color: @title-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            line-height: 19.5px;
+            font-weight: 700;
+        }
+        &_list{
+            display: flex;
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        &_item{
+            border: 1px solid @border-color;
+            border-radius: 4px;
+            margin-right: 12px;
+            width: 314px;
+            text-align: center;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover{
+                border: 1px solid @border-hover-color;
+                box-shadow: 0 0.6rem 0.8rem -0.3rem @box-shadow-color;
+            }
+        }
+        &_link{
+            &:hover{
+                text-decoration: none;
+            }
+            p{
+                margin: 0;
+            }
+            &_title{
+                padding: 16px;
+                margin-bottom: 4px;
+                color: @main-color;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13px;
+                line-height: 19.5px;
+                font-weight: 700;
+            }
+        }
+        &_img{
+            width: 150px;
+            padding: 12px;
+        }
+        &_picture{
+            background-color: @previously-background-color;
+        }
+        &_links{
+            color: @main-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            line-height: 19.5px;
+        }
+    }
+    .product_highlighted{
+        margin-bottom: 32px;
+        &_title{
+            color: @title-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            line-height: 19.5px;
+            font-weight: 700;
+        }
+        &_list{
+            display: flex;
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        &_item{
+            border: 1px solid @border-color;
+            border-radius: 4px;
+            margin-right: 12px;
+            width: 420px;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover{
+                border: 1px solid @border-hover-color;
+                box-shadow: 0 0.6rem 0.8rem -0.3rem @box-shadow-color;
+            }
+        }
+        &_link{
+            &:hover{
+                text-decoration: none;
+            }
+            p{
+                margin: 0;
+            }
+            &_title{
+                padding: 16px;
+                margin-bottom: 4px;
+                color: @main-color;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13px;
+                line-height: 19.5px;
+                font-weight: 700;
+            }
+            &_text{
+                padding: 0 16px 16px 16px;
+                color: @title-color;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13px;
+                line-height: 19.5px;
             }
         }
     }
