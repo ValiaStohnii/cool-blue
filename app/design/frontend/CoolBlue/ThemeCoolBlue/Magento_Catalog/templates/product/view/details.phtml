@@ -42,11 +42,12 @@
                 <div class="product_sticky_box">
                     <p class="product_sticky_text">779,-</p>
                     <button class="action primary tocart">In my shopping cart</button>
-                    <button class="towishlist">
-                        <svg class="towishlist_icon" width="16px" height="16px">
-                            <use href="<?=$block->getViewFileUrl('images/icons.svg#icon-heart')?>"></use>
-                        </svg>
-                    </button>
+                        <?php 
+                        echo $this->getLayout()
+                        ->createBlock('Magento\Wishlist\Block\Catalog\Product\View\AddTo\Wishlist')
+                        ->setTemplate('Magento_Wishlist::catalog/product/view/addto/wishlist.phtml')
+                        ->toHtml();
+                        ?>
                 </div>
             </div>
             <div class="detailed_nav_block">
