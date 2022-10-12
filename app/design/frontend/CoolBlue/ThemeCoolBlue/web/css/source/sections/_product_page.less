@@ -20,6 +20,7 @@
 @box-shadow-color:#eee;
 @previously-background-color:#f2f7fc;
 @table-tr: #f3f3f3;
+@check-icon-color:#00b900;
 
 
 .catalog-product-view{
@@ -246,8 +247,113 @@
         position: relative;
         .product_sticky{
             position: sticky;
-            top:0;
+            top: 51px;
             left: 0;
+            z-index: 9999999999;
+            background-color: @second-color;
+            display: flex;
+            justify-content: space-between;
+            padding: 12px;
+            box-shadow: 0 0.6rem 0.8rem -0.3rem @box-shadow-color;
+            transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            &_box{
+                display: flex;
+                align-items: flex-start;
+
+                .action.primary.tocart{
+                    background-color: @action-primary-tocart;
+                    box-shadow: inset 0 -2px 0 0 @previously-button-color;
+                    color: @second-color;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 13px;
+                    line-height: 19.5px;
+                    font-weight: 700;
+                    border-color: @action-primary-tocart;
+                    border-radius: 4px;
+                    width: 100%;
+                    padding: 15px 16px;
+                    margin-left: 24px;
+                    margin-right: 8px;
+                    &:hover{
+                        background-color: @previously-button-color;
+                        box-shadow: inset 0 -2px 0 0 @previously-button-hover-color;
+                    }
+                }
+                .towishlist{
+                    padding: 15px 16px;
+                    border: 1px solid #8dc8ea;
+                    box-shadow: inset 0 -2px 0 0 #40acea;
+                    border-radius: 4px;
+                    background-color: @second-color;
+                    color: @main-color;
+                    span{
+                        display: none;
+                    }
+                    &:hover{
+                        border: 1px solid #40acea;
+                        box-shadow: inset 0 -2px 0 0 @main-color;
+                    }
+                    &_icon{
+                        fill: @main-color;
+                    }
+                }
+            }
+            &_list{
+                display: flex;
+                list-style: none;
+                padding-left: 0;
+                margin: 0;
+            }
+            &_item{
+                padding-right: 8px;
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+            &_text{
+                color: @title-color;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13px;
+                line-height: 19.5px;
+                font-weight: 700;
+                margin-bottom: 4px;
+                padding-top: 3px;
+            }
+            &_link{
+                color: @title-color;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13px;
+                line-height: 19.5px;
+                display: flex;
+                align-items: center;
+                &:hover{
+                    text-decoration: none;
+                    color: @main-color;
+                }
+            }
+            &_orange{
+                color: @accent-color;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13px;
+                line-height: 19.5px;
+                font-weight: 700;
+                margin-left: 3px;
+                margin-right: 3px;
+                &:hover{
+                    text-decoration: none;
+                    color: @accent-color;
+                }
+            }
+            &_img{
+                height: 48px;
+            }
+            &_icon{
+                fill: @check-icon-color;
+                margin-right: 8px;
+            }
+        }
+        .product_sticky.unactive{
+            display: none;
         }
         .detailed_nav{
             &_block{
