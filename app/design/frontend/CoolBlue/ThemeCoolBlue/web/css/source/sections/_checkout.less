@@ -1,0 +1,87 @@
+/**
+ * @author      Valia <valiastohnii@gmail.com>
+ * @copyright   Copyright (c) 2022 GmbH 
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+
+//
+//  Variables
+//  _____________________________________________
+@main-color: #0090e3;
+@second-color: #fff;
+@title-color: #111;
+@page-title-color:#285dab;
+@cart-empty-button-color:#009600;
+@previously-button-color:#090;
+@previously-button-hover-color:#005e00;
+@border-color:#ddd;
+@border-hover-color:#bbb;
+
+//
+//  Checkout cart
+//  _____________________________________________
+
+.shopping_cart{
+    &_title{
+        color: @page-title-color;
+        font-size: 28px;
+        font-family: 'Noto Serif Georgian', serif;
+        font-weight: 700;
+        line-height: 35px;
+        margin-bottom: 0;
+        margin-top: 12px;
+
+    }
+    &_text{
+        color: @main-color;
+        font-size: 22.4px;
+        font-family: 'Noto Serif Georgian', serif;
+        line-height: 22.4px;
+        margin: 0;
+    }
+    &_block{
+        a{
+            color: @main-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            line-height: 19.5px;
+        }
+    }
+}
+.cart.table-wrapper{
+    display: flex;
+
+    .product-item-photo{
+        width: 185px;
+        padding: 0;
+    }
+    .product-item-details{
+        .field.qty{
+            display: flex;
+            .item-actions{
+                padding-left: 60px;
+                .actions-toolbar{
+                    .action-edit{
+                        display: none;
+                    }
+                    a{
+                        color: @main-color;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 13px;
+                        line-height: 19.5px;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                    .action.action-delete{
+                        margin-right: 8px;
+                        padding-top: 4px;
+                        &::before{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
