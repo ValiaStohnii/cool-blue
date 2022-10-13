@@ -17,6 +17,7 @@
 @border-color:#ddd;
 @border-hover-color:#bbb;
 @span-color:#999;
+@action-primary-tocart: #00b900;
 
 //
 //  Checkout cart
@@ -53,6 +54,7 @@
     display: flex;
     border-bottom: 1px solid @border-color;
     margin-top: 16px;
+    margin-bottom: 0;
 
     .product-item-photo{
         width: 185px;
@@ -171,7 +173,7 @@
         &--green{
             position: absolute;
             top: 0;
-            right: 335px;
+            right: 280px;
             color: @previously-button-color;
             font-family: 'Open Sans', sans-serif;
             font-size: 13px;
@@ -211,6 +213,155 @@
                 padding: 0.3px 7px;
                 font-weight: 700;              
             }
+        }
+    }
+}
+.cart-summary{
+    width: 30%;;
+    padding: 80px 0px 0px 0px;
+    position: static;
+    background-color: @second-color;
+    .summary.title{
+        display: none;
+    }
+    .block.shipping{
+        display: none;
+    }
+    .cart-totals{
+        border: none;
+    }
+    .totals.sub{
+        display: none;
+    }
+    .summary_cart{
+        &_title-list{
+            color: @title-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            line-height: 19.5px;
+            font-weight: 700;
+        }
+        &_top_box_list{
+            list-style: none;
+            padding-left:0;
+            margin: 0;
+        }
+        &_top_box_item{
+            margin-bottom: 4px;
+        }
+        &_link{
+            color: @title-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            line-height: 19.5px;
+            display: flex;
+            align-items: center;
+            &:hover{
+                text-decoration: none;
+                color: @main-color;
+            }
+        }
+        &_orange{
+            color: @accent-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            line-height: 19.5px;
+            font-weight: 700;
+            margin-left: 3px;
+            margin-right: 3px;
+            &:hover{
+                text-decoration: none;
+                color: @accent-color;
+            }
+        }
+        &_icon{
+            fill: @check-icon-color;
+            margin-right: 8px;
+        }
+    }
+    .grand.totals{
+        .mark,
+        .amount{
+        color: @title-color;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        line-height: 19.5px;
+        font-weight: 700;
+        }
+    }
+    .action.primary.checkout{
+        background-color: @action-primary-tocart;
+        box-shadow: inset 0 -2px 0 0 @previously-button-color;
+        border-color: @action-primary-tocart;
+        border-radius: 4px;
+        &:hover{
+            background-color: @previously-button-color;
+            box-shadow: inset 0 -2px 0 0 @previously-button-hover-color;
+        }
+        span{
+            color: @second-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            line-height: 19.5px;
+            font-weight: 700;
+        }
+    }
+}
+.form.form-cart{
+    width: 70%;
+}
+.summary_cart{
+    margin-top: 16px;
+    &_list{
+        display: flex;
+        list-style: none;
+        padding-left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    &_item{
+        margin-right: 20px;
+        margin-bottom: 0;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &_title{
+        color: @title-color;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        line-height: 19.5px;
+        font-weight: 700;
+    }
+    &_text{
+        color: @title-color;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        line-height: 19.5px;
+    }
+    &_img{
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.block.crosssell{
+    margin-top: 0;
+    .action.tocart.primary{
+        background-color: @action-primary-tocart;
+        box-shadow: inset 0 -2px 0 0 @previously-button-color;
+        border-color: @action-primary-tocart;
+        border-radius: 4px;
+        &:hover{
+            background-color: @previously-button-color;
+            box-shadow: inset 0 -2px 0 0 @previously-button-hover-color;
+        }
+        span{
+            color: @second-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            line-height: 19.5px;
+            font-weight: 700;
         }
     }
 }

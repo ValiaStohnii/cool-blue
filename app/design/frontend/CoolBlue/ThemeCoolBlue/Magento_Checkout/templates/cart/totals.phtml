@@ -10,6 +10,32 @@
  * @var $block \Magento\Checkout\Block\Cart\Totals
  */
 ?>
+<div class="summary_cart_top_box">
+    <p class="summary_cart_title-list">Delivery and service</p>
+    <ul class="summary_cart_top_box_list">
+        <li class="summary_cart_top_box_item">
+            <a class="summary_cart_link" href="">
+                <svg class="summary_cart_icon" width="16px" height="16px">
+                    <use href="<?=$block->getViewFileUrl('images/icons.svg#icon-checkmark')?>"></use>
+                </svg>Ordered before<span class="summary_cart_orange">23:59,</span> delivered tomorrow <span class="summary_cart_orange">for free.</span>
+            </a>
+        </li>
+        <li class="summary_cart_top_box_item">
+            <a class="summary_cart_link" href="">
+                <svg class="summary_cart_icon" width="16px" height="16px">
+                    <use href="<?=$block->getViewFileUrl('images/icons.svg#icon-checkmark')?>"></use>
+                </svg>Choose the day or the time that suits you.
+            </a>
+        </li>
+        <li class="summary_cart_top_box_item">
+            <a class="summary_cart_link" href="">
+                <svg class="summary_cart_icon" width="16px" height="16px">
+                    <use href="<?=$block->getViewFileUrl('images/icons.svg#icon-checkmark')?>"></use>
+                </svg>Pick up at PostNL pickup points or Coolblue stores.
+            </a>
+        </li>
+    </ul>
+</div>
 <div id="cart-totals" class="cart-totals" data-bind="scope:'block-totals'">
     <!-- ko template: getTemplate() --><!-- /ko -->
     <script type="text/x-magento-init">

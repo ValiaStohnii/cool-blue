@@ -18,4 +18,38 @@
             <?php endif; ?>
         <?php endforeach; ?>
     </ul>
+    <div class="summary_cart">
+        <ul class="summary_cart_list">
+                    <li class="summary_cart_item">
+                        <a href="">
+                            <svg class="summary_cart_icon" width="32px" height="32px">
+                                <use href="<?=$block->getViewFileUrl('images/icons.svg#icon-ideal')?>"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="summary_cart_item">
+                        <a href="">
+                            <svg class="summary_cart_icon" width="38px" height="23px">
+                                <use href="<?=$block->getViewFileUrl('images/icons.svg#icon-Mastercard')?>"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="summary_cart_item">
+                        <a href="">
+                            <svg class="summary_cart_icon" width="56px" height="18px">
+                                <use href="<?=$block->getViewFileUrl('images/icons.svg#icon-visa')?>"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="summary_cart_item">
+                        <a href="">
+                            <svg class="summary_cart_icon" width="48px" height="30px">
+                                <use href="<?=$block->getViewFileUrl('images/icons.svg#icon-apple-pay')?>"></use>
+                            </svg>
+                        </a>
+                    </li>
+        </ul>
+        <p class="summary_cart_title">  <img src="<?=$block->getViewFileUrl('images/blue-gift-box.png')?>" alt="gift" class="summary_cart_img"> Do you have a gift card or CoolblueCredit?</p>
+        <p class="summary_cart_text">You can add this during the payment step in the checkout</p>
+    </div>
 <?php endif; ?>
