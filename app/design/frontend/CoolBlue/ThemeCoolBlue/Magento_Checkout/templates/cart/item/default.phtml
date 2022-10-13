@@ -51,8 +51,9 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
                             </div>
                         </div>
                         <div class="control qty">
-                            <label for="cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty">
-                                <!-- <span class="label"><?= $block->escapeHtml(__('Qty')) ?></span> -->
+                            <button type="button"   id="<?= /* @escapeNotVerified */ $_item->getId() ?>-dec"  class="decQty">-</button>
+                           
+                                
                                 <input id="cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty"
                                        name="cart[<?= $block->escapeHtmlAttr($_item->getId()) ?>][qty]"
                                        data-cart-item-id="<?= $block->escapeHtmlAttr($_item->getSku()) ?>"
@@ -65,7 +66,8 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
                                        data-validate="{required:true,'validate-greater-than-zero':true}"
                                        data-item-qty="<?= $block->escapeHtmlAttr($block->getQty()) ?>"
                                        data-role="cart-item-qty"/>
-                            </label>
+                            
+                            <button type="button"  id="<?= /* @escapeNotVerified */ $_item->getId() ?>-upt" class="incQty">+</button>
                         </div>
                     </div>
                 </td>
@@ -95,6 +97,34 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
                 <?php if ($addInfoBlock): ?>
                     <?= $addInfoBlock->setItem($_item)->toHtml() ?>
                 <?php endif; ?>
+                   <p class="insurance_title">Included for free</p>
+                   <p class="insurance_text--blue">1-year Norton 360 antivirus <span class="insurance_span">worth 69,99</span></p>
+                   <div>
+                        <p class="insurance_title">Choose your insurance</p>
+                        <ul class="insurance_list">
+                            <li class="insurance_item">
+                                <input type="radio" id="insurance1" name="insurance" checked>
+                                <label for="insurance1" class="insurance_text">No, I'll pay myself if repair or replacement isn't covered under warranty.</label>  
+                            </li>
+                            <li class="insurance_item insurance_item--after ">
+                                <input type="radio" id="insurance2" name="insurance">
+                                <label class="insurance_text" for="insurance2">2-year Backup Plan Damage <p class="insurance_span">39,90 one-time payment</p></label>  
+                            </li>
+                            <li class="insurance_item insurance_item--after">
+                                <input type="radio" id="insurance3" name="insurance">
+                                <label class="insurance_text" for="insurance3">2-year Backup Plan Complete  <span class="insurance_span--green">Recommended</span>
+                                <p class="insurance_span">79,90 one-time payment</p></label>  
+                            </li>
+                            <li class="insurance_item insurance_item--after">
+                                <input type="radio" id="insurance4" name="insurance">
+                                <label class="insurance_text" for="insurance4">3-year Backup Plan Damage <p class="insurance_span">69,90 one-time payment</p></label>
+                            </li>
+                            <li class="insurance_item insurance_item--after">
+                                <input type="radio" id="insurance4" name="insurance">
+                                <label class="insurance_text" for="insurance4">3-year Backup Plan Complete <p class="insurance_span">119,90 one-time payment</p></label>  
+                            </li>
+                        </ul>
+                   </div>
             </div>
         </td>
         
@@ -109,3 +139,10 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
         </td>
     </tr>
 </tbody>
+<script type="text/x-magento-init">
+    {
+        ".control.qty": {
+            "qty_counter":{}
+        }
+    }
+</script>
