@@ -14,19 +14,14 @@
 
 
 //
-//  Navigation
+//  Common
 //  _____________________________________________
+& when (@media-common = true) {  
 
 .nav-sections{
     background-color: @background-nav-color;
-    position: sticky;
-    z-index: 99;
-    top: 52px;
-    width: 100%;
-    margin-bottom: 16px;
 }
 .navigation .level0  .level-top{
-    padding: 0;
     color: @main-nav-color;
     &:hover{
         color: @main-nav-color;
@@ -37,10 +32,6 @@
     display: none;
 }
 
-.navigation .level0.parent .level-top{
-    padding-right: 0;
-}
-
 .navigation{
     background-color:@background-nav-color;
     display: flex;
@@ -49,22 +40,7 @@
     align-items: center;
 
     .level0{
-        position: static;
         .submenu {
-            left: -275px !important;
-
-            li{
-                width: 199px;
-                margin-left: 271px;
-
-                .submenu{
-                    width: auto;
-                    li{
-                        margin: 0;
-                    }
-                }
-            }
-
             a{
                 background-color: @second-nav-color;
                 color: @main-nav-color;
@@ -78,19 +54,9 @@
             }
         }
     }
-
-    .nav-1,.nav-2,.nav-3,.nav-4,.nav-5,.nav-6,.nav-7,.nav-8,.nav-9,.nav-10{
-        ul{
-            width: 1827px;
-            justify-content: space-evenly;
-        }
-    }
     
     ul {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0;
+        background-color: @background-nav-color;
         li{
             margin: 0;
             margin-right: 10px;
@@ -111,3 +77,200 @@
         }
     }
 }
+}
+
+
+//
+//  Mobile @screen__m
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .nav-open .nav-sections{
+        z-index: 100;
+    }
+    .navigation .level0  .level-top{
+        height: auto;
+    }
+    .navigation{
+        .level0{
+            .submenu {
+                a{
+                    padding: 10px;
+                }
+            }
+        }
+
+        ul {
+            padding-left: 5px;
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .nav-sections{
+        position: sticky;
+        z-index: 99;
+        top: 52px;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    .navigation .level0.parent .level-top .ui-menu-icon:after {
+        display: none;
+    }
+    .navigation .level0  .level-top{
+        padding: 0;
+    }
+    
+    .navigation .level0.parent .level-top{
+        padding-right: 0;
+    }
+    .navigation{
+        .level0{
+            position: static;
+            .submenu {
+                left: -275px !important;
+    
+                li{
+                    width: 199px;
+                    margin-left: 271px;
+    
+                    .submenu{
+                        width: auto;
+                        li{
+                            margin: 0;
+                        }
+                    }
+                }
+    
+                a{
+                    background-color: @second-nav-color;
+                    color: @main-nav-color;
+                    height: auto;
+                    &:hover{
+                        background-color: @second-nav-color;
+                        color: @main-nav-color;
+                        text-decoration: underline;
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    
+        .nav-1,.nav-2,.nav-3,.nav-4,.nav-5,.nav-6,.nav-7,.nav-8,.nav-9,.nav-10{
+            ul{
+                width: 1827px;
+                justify-content: space-evenly;
+            }
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0;
+            li{
+                margin: 0;
+            }
+        }
+    }
+
+
+}
+
+// .nav-sections{
+//     background-color: @background-nav-color;
+//     position: sticky;
+//     z-index: 99;
+//     top: 52px;
+//     width: 100%;
+//     margin-bottom: 16px;
+// }
+// .navigation .level0  .level-top{
+//     padding: 0;
+//     color: @main-nav-color;
+//     &:hover{
+//         color: @main-nav-color;
+//     }
+// }
+
+// .navigation .level0.parent .level-top .ui-menu-icon:after {
+//     display: none;
+// }
+
+// .navigation .level0.parent .level-top{
+//     padding-right: 0;
+// }
+
+// .navigation{
+//     background-color:@background-nav-color;
+//     display: flex;
+//     align-content: center;
+//     justify-content: center;
+//     align-items: center;
+
+//     .level0{
+//         position: static;
+//         .submenu {
+//             left: -275px !important;
+
+//             li{
+//                 width: 199px;
+//                 margin-left: 271px;
+
+//                 .submenu{
+//                     width: auto;
+//                     li{
+//                         margin: 0;
+//                     }
+//                 }
+//             }
+
+//             a{
+//                 background-color: @second-nav-color;
+//                 color: @main-nav-color;
+//                 height: auto;
+//                 &:hover{
+//                     background-color: @second-nav-color;
+//                     color: @main-nav-color;
+//                     text-decoration: underline;
+//                     border-bottom: none;
+//                 }
+//             }
+//         }
+//     }
+
+//     .nav-1,.nav-2,.nav-3,.nav-4,.nav-5,.nav-6,.nav-7,.nav-8,.nav-9,.nav-10{
+//         ul{
+//             width: 1827px;
+//             justify-content: space-evenly;
+//         }
+//     }
+    
+//     ul {
+//         display: flex;
+//         justify-content: space-between;
+//         width: 100%;
+//         padding: 0;
+//         li{
+//             margin: 0;
+//             margin-right: 10px;
+//             a{
+//                 height: 52px;
+//                 box-shadow: none;
+//                 padding: 0;
+//                 border: 0px;
+//                 background-color: @background-nav-color;
+//                 color: @main-nav-color;
+//                 font-family: 'Open Sans', sans-serif;
+//                 font-weight: 600;
+//                 font-size: 13px;
+//                 &:hover{
+//                     border-bottom: 3px solid  @main-nav-color;
+//                 }
+//             }
+//         }
+//     }
+// }
